@@ -19,14 +19,12 @@ namespace BoilerMate.Views
         {    
             InitializeComponent();
 
-            BindingContext = viewModel = new ExportViewModel();
-
-           
+            BindingContext = viewModel = new ExportViewModel();           
         }
 
         private void SelectFile(object sender, EventArgs e)
         {
-
+            // option to oen xlxs file or create pdf version
         }
 
         protected override void OnAppearing()
@@ -34,7 +32,7 @@ namespace BoilerMate.Views
             base.OnAppearing();
 
             if (viewModel.Items.Count == 0)
-                viewModel.LoadItemsCommand.Execute(null);
+                viewModel.LoadExportCommand.Execute(null);
         }
     }
 }

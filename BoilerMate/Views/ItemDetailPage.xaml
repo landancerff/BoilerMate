@@ -3,36 +3,151 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:expandable="clr-namespace:Expandable;assembly=ExpandableView"
              mc:Ignorable="d"
              x:Class="BoilerMate.Views.ItemDetailPage"
              Title="{Binding Title}">
     
     <ScrollView Orientation="Both" Padding="0" VerticalOptions="FillAndExpand" VerticalScrollBarVisibility="Never">
         <StackLayout Spacing="20" Padding="15">
-            
-            <Label Text="Text:" FontSize="Medium" />
-            <Label Text="{Binding Item.Text}" d:Text="Item name" FontSize="Small"/>
-            
-            <Label Text="Description:" FontSize="Medium" />
-            <Label Text="{Binding Item.Description}" d:Text="Item description" FontSize="Small"/>
 
-            <Label Text="First Name" FontSize="Medium" />
-            <Label Text="{Binding Item.FirstName}" d:Text="Clients first name" FontSize="Small"  />
+            <expandable:ExpandableView>
+                <expandable:ExpandableView.PrimaryView>
+                    <StackLayout Orientation="Vertical">
+                        <Label Text="Marketing Details" FontSize="20" VerticalTextAlignment="Center"/>
+                    </StackLayout>
+                </expandable:ExpandableView.PrimaryView>
+                <expandable:ExpandableView.SecondaryViewTemplate>
+                    <DataTemplate>
+                        <StackLayout Padding="5">
 
-            <Label Text="Last Name" FontSize="Medium" />
-            <Label Text="{Binding Item.LastName}" d:Text="Clients last name." FontSize="Small"  />
+                            <Label Text="Survey Date  Time" FontSize="Medium" />
+                            <Label Text="{Binding Item.SurveyDateTime}" d:Text="Survey Date Time" FontSize="Small" />
 
-            <Label Text="House Number" FontSize="Medium" />
-            <Label Text="{Binding Item.HouseNumber}" d:Text="House number" FontSize="Small" />
+                            <Label Text="Marketing" FontSize="Medium" />
+                            <Label Text="{Binding Item.Marketing}" d:Text="Marketing Detail" FontSize="Small" />
 
-            <Label Text="Address Line 1" FontSize="Medium" />
-            <Label Text="{Binding Item.AddressLine1}" d:Text="Address line 1" FontSize="Small" />
+                            <Label Text="First Name" FontSize="Medium" />
+                            <Label Text="{Binding Item.FirstName}" d:Text="Clients first name" FontSize="Small" Margin="0" />
 
-            <Label Text="Address Line 2" FontSize="Medium" />
-            <Label Text="{Binding Item.AddressLine2}" d:Text="Address line 2" FontSize="Small" />
+                            <Label Text="Last Name" FontSize="Medium" />
+                            <Label Text="{Binding Item.LastName}" d:Text="Clients last name." FontSize="Small" Margin="0" />
 
-            <Label Text="Address Line 3" FontSize="Medium" />
-            <Label Text="{Binding Item.AddressLine3}" d:Text="Address line 3" FontSize="Small" />
+                            <Label Text="House Number" FontSize="Medium" />
+                            <Label Text="{Binding Item.HouseNumber}" d:Text="House number" FontSize="Small" Margin="0" />
+
+                            <Label Text="Address Line 1" FontSize="Medium" />
+                            <Label Text="{Binding Item.AddressLine1}" d:Text="Address line 1" FontSize="Small" Margin="0" />
+
+                            <Label Text="Address Line 2" FontSize="Medium" />
+                            <Label Text="{Binding Item.AddressLine2}" d:Text="Address line 2" FontSize="Small" Margin="0" />
+
+                            <Label Text="Address Line 3" FontSize="Medium" />
+                            <Label Text="{Binding Item.AddressLine3}" d:Text="Address line 3" FontSize="Small" Margin="0" />
+
+                            <Label Text="Postcode" FontSize="Medium" />
+                            <Entry Text="{Binding Item.Postcode}" d:Text="Postal Code" FontSize="Small" />
+
+                            <Label Text="Mobile Phone Number" FontSize="Medium" />
+                            <Label Text="{Binding Item.MobilePhone}" d:Text="Mobile Number" FontSize="Small" Margin="0" />
+
+                            <Label Text="Home Phone Number" FontSize="Medium" />
+                            <Label Text="{Binding Item.HomePhone}" d:Text="home Phone Number" FontSize="Small" Margin="0" />
+
+                            <Label Text="Email Address" FontSize="Medium" />
+                            <Label Text="{Binding Item.EmailAddress}" d:Text="Email Address" FontSize="Small" Margin="0" />
+
+                            <Label Text="Description" FontSize="Medium" />
+                            <Label Text="{Binding Item.Description}" d:Text="Item description" FontSize="Small" Margin="0" />
+
+                        </StackLayout>
+                    </DataTemplate>
+                </expandable:ExpandableView.SecondaryViewTemplate>
+            </expandable:ExpandableView>
+
+            <expandable:ExpandableView>
+                <expandable:ExpandableView.PrimaryView>
+                    <StackLayout Orientation="Vertical">
+                        <Label Text="Existing Boiler Details" FontSize="20" VerticalTextAlignment="Center"/>                       
+                    </StackLayout>
+                </expandable:ExpandableView.PrimaryView>
+
+                <expandable:ExpandableView.SecondaryViewTemplate>
+                    <DataTemplate>
+                        <StackLayout Padding="5">
+
+                            <Label Text="Boiler" FontSize="Medium" />
+                            <Label Text="{Binding Item.Boiler}" d:Text="Boiler Type" FontSize="Small" Margin="0" />
+
+                            <Label Text="Flue" FontSize="Medium" />
+                            <Label Text="{Binding Item.Flue}" d:Text="Flule Type" FontSize="Small" Margin="0" />
+
+                            <Label Text="Location" FontSize="Medium" />
+                            <Label Text="{Binding Item.Location}" d:Text="Boiler Location" FontSize="Small" Margin="0" />
+
+                            <Label Text="Boiler Gas Supply" FontSize="Medium" />
+                            <Label Text="{Binding Item.BoilerGasSupply}" d:Text="Boiler Location" FontSize="Small" Margin="0" />
+
+                            <Label Text="Walls" FontSize="Medium" />
+                            <Label Text="{Binding Item.Walls}" d:Text="Boiler Location" FontSize="Small" Margin="0" />
+
+                            <Label Text="Loft Ladder" FontSize="Medium" />
+                            <CheckBox  IsChecked="{Binding Item.LoftLader}"  Margin="0"></CheckBox>
+
+
+                        </StackLayout>
+                    </DataTemplate>
+                </expandable:ExpandableView.SecondaryViewTemplate>
+            </expandable:ExpandableView>
+
+            <expandable:ExpandableView>
+                <expandable:ExpandableView.PrimaryView>
+                    <StackLayout Orientation="Vertical">
+                        <Label Text="Existing Radiators Details" FontSize="20" VerticalTextAlignment="Center"/>                      
+                    </StackLayout>
+                </expandable:ExpandableView.PrimaryView>
+                <expandable:ExpandableView.SecondaryViewTemplate>
+                    <DataTemplate>
+                        <StackLayout Padding="2">
+
+                            <Label Text="Down" FontSize="Medium" />
+                            <Label Text="{Binding Item.Down}"  FontSize="Small" Margin="0" />
+
+                            <Label Text="Up" FontSize="Medium" />
+                            <Label Text="{Binding Item.Up}"  FontSize="Small" Margin="0" />
+
+                            <Label Text="Towel Radiators" FontSize="Medium" />
+                            <Label Text="{Binding Item.TowelRads}"  FontSize="Small" Margin="0" />
+
+                            <Label Text="Pipe Sizes" FontSize="Medium" />
+                            <Label Text="{Binding Item.PipeSizes}"  FontSize="Small" Margin="0" />
+                            
+                            <Label Text="Existing Shower" FontSize="Medium" />
+                            <Label Text="{Binding Item.ExistingShower}"  FontSize="Small" Margin="0" />
+
+                            <Label Text="Valve" FontSize="Medium" />
+                            <Label Text="{Binding Item.Valve}"  FontSize="Small" Margin="0" />
+
+                            <Label Text="GR FP" FontSize="Medium" />
+                            <Label Text="{Binding Item.GRFP}" d:Text="GR FP" FontSize="Small" Margin="0" />
+
+                            <Label Text="Pump" FontSize="Medium" />
+                            <Label Text="{Binding Item.Pump}"  FontSize="Small" Margin="0" />
+
+                            <Label Text="Cylinder" FontSize="Medium" />
+                            <Label Text="{Binding Item.Cylinder}"  FontSize="Small" Margin="0" />
+
+                            <Label Text="Controls Location" FontSize="Medium" />
+                            <Label Text="{Binding Item.ControlsLocation}"  FontSize="Small" Margin="0" />
+
+                            <Label Text="Pump Location" FontSize="Medium" />
+                            <Label Text="{Binding Item.PumpLocation}"  FontSize="Small" Margin="0" />
+
+                        </StackLayout>
+                    </DataTemplate>
+                </expandable:ExpandableView.SecondaryViewTemplate>
+            </expandable:ExpandableView>
+
 
             <Image x:Name="PhotoImageDisplay"   VerticalOptions="Center" HorizontalOptions="Center" WidthRequest="60" HeightRequest="60">
                 <Image.GestureRecognizers>

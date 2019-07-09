@@ -38,14 +38,15 @@ namespace BoilerMate.Services
         {
             var exists = connection.Query<ExportModel>($"SELECT name FROM sqlite_master WHERE type = 'table' AND name = '{table}';");
             if (exists.Count > 0) { return true; }
-            return true;
+            return false;
         }
-        public bool CreateExportTableAsync(string table)
+        public  bool CreateExportTableAsync(string table)
         {
-            var response = connection.CreateTable<ExportModel>();
-
-            if (response == SQLite.CreateTableResult.Created)
-            {
+            var response =  connection.CreateTable<ExportModel>();
+            var i = string.Empty;
+            i = connection.GetTableInfo("ExportModel").ToString();
+            if (i != null) //  SQLite.CreateTableResult.Created)
+            {               
                 return true;
             }
             return false;

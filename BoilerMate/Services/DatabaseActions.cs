@@ -44,7 +44,7 @@ namespace BoilerMate.Services
             public async Task<int> SaveJobAsync(JobReport job)
             {
               
-                //context.DeleteTable();    Clear data of table, use if new fields are added.
+              // context.DeleteTable();    
 
                 if (context.TableExists("PreviousJobs")){
                     return database.Insert(job);
@@ -64,16 +64,16 @@ namespace BoilerMate.Services
 
             public List<ExportModel> GetAllExportsAsync()
             {
-
-                if (context.TableExists("Exports"))
+                //context.DeleteTable();
+                if (context.ExportTableExists("ExportModel"))
                 {
-                    return database.Query<ExportModel>("Select * From Exports");
+                    return database.Query<ExportModel>("Select * From ExportModel");
                 }
                 else
                 {
-                    if (context.CreateTableAsync("Exports"))
+                    if (context.CreateExportTableAsync("ExportModel"))
                     {
-                        return database.Query<ExportModel>("Select * From Exports");
+                        return database.Query<ExportModel>("Select * From ExportModel");
                     }
                     return null;
                 }
@@ -87,14 +87,14 @@ namespace BoilerMate.Services
 
                 //context.DeleteTable();    Clear data of table, use if new fields are added.
 
-                if (context.ExportTableExists("Exports"))
+                if (context.ExportTableExists("ExportModel"))
                 {
                     return database.Insert(job);
                 }
                 else
                 {
-                    context.CreateExportTableAsync("Exports");
-                    if (context.ExportTableExists("Exports"))
+                    context.CreateExportTableAsync("ExportModel");
+                    if (context.ExportTableExists("ExportModel"))
                     {
                         return database.Insert(job);
                     }

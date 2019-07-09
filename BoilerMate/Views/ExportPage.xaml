@@ -3,14 +3,13 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:expandable="clr-namespace:Expandable;assembly=ExpandableView"
              mc:Ignorable="d"
              x:Class="BoilerMate.Views.ExportPage"
              Title="{Binding Title}">
     
     <ContentPage.Content>
         <StackLayout>
-            
-           
 
             <Button Text="Pick File"  HorizontalOptions="Center"  
                VerticalOptions="Center"/>
@@ -21,7 +20,7 @@
                 ItemsSource="{Binding Items}"
                 VerticalOptions="FillAndExpand"
                 HasUnevenRows="true"
-                RefreshCommand="{Binding LoadItemsCommand}"
+                RefreshCommand="{Binding LoadExportCommand}"
                 IsPullToRefreshEnabled="true"
                 IsRefreshing="{Binding IsBusy, Mode=OneWay}"
                 CachingStrategy="RecycleElement">
@@ -37,8 +36,21 @@
                         <DataTemplate>
                             <ViewCell>
                                 <StackLayout Padding="10">
-                                    <Label Text="{Binding FileName}" d:Text="{Binding .}" LineBreakMode="NoWrap" Style="{DynamicResource ListItemTextStyle}" FontSize="13" />
-                                    <Label Text="{Binding CreatedDate}" d:Text="Item descripton" LineBreakMode="NoWrap" Style="{DynamicResource ListItemDetailTextStyle}" FontSize="11" />
+                                    <expandable:ExpandableView>
+                                        <expandable:ExpandableView.PrimaryView>
+                                            <StackLayout Orientation="Vertical">
+                                                <Label Text="{Binding FileName}" d:Text="{Binding .}" LineBreakMode="NoWrap" Style="{DynamicResource ListItemTextStyle}" FontSize="13" />
+                                                <Label Text="{Binding CreatedDate}" d:Text="Item descripton" LineBreakMode="NoWrap" Style="{DynamicResource ListItemDetailTextStyle}" FontSize="11" />
+                                            </StackLayout>
+                                        </expandable:ExpandableView.PrimaryView>
+                                        <expandable:ExpandableView.SecondaryViewTemplate>
+                                            <DataTemplate>
+                                                <StackLayout Padding="2">
+                                                    <Button Text="Create PDF" ></Button>
+                                                </StackLayout>
+                                            </DataTemplate>
+                                        </expandable:ExpandableView.SecondaryViewTemplate>
+                                    </expandable:ExpandableView>
                                 </StackLayout>
                             </ViewCell>
                         </DataTemplate>

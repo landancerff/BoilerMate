@@ -16,7 +16,7 @@ namespace BoilerMate.ViewModels
     {
         readonly DatabaseActions.DatabaseManager _context = new DatabaseActions.DatabaseManager();
         public ObservableCollection<ExportModel> Items { get; set; }
-        public Command LoadItemsCommand { get; set; }
+        public Command LoadExportCommand { get; set; }
         public ExportModel Export { get; set; }
 
 
@@ -24,7 +24,7 @@ namespace BoilerMate.ViewModels
         {
             Title = "Exported Job";
             Items = new ObservableCollection<ExportModel>();
-            LoadItemsCommand = new Command(async () => await ExecuteLoadItemsCommand());
+            LoadExportCommand = new Command(async () => await ExecuteLoadItemsCommand());
 
             MessagingCenter.Subscribe<ExportPage, ExportModel>(this, "AddItem", async (obj, item) =>
             {
@@ -49,7 +49,7 @@ namespace BoilerMate.ViewModels
                 Tools toolContext = new Tools();
                 var items = _context.GetAllExportsAsync();
 
-                var outImg = new Image();
+                //var outImg = new Image();
 
                 foreach (var item in items)
                 {                   

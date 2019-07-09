@@ -29,12 +29,14 @@ namespace BoilerMate.Services
                 worksheet.Range["A1"].Text = item.Id.ToString();
                 worksheet.Range["B1"].Text = item.Description;
 
+                //// add the rest of the fields once the model has been built correctly
+
                 MemoryStream stream = new MemoryStream();
                 workbook.SaveAs(stream);
 
                 workbook.Close();
 
-               await SaveAndView("PreviousJobs.xlsx", "application/msexcel", stream);
+               await SaveAndView($"Export_{item.HouseNumber}_{item.AddressLine1}.xlsx", "application/msexcel", stream);
 
                 return true;
             }

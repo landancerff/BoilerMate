@@ -3,6 +3,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:expandable="clr-namespace:Expandable;assembly=ExpandableView"
              mc:Ignorable="d"
              x:Class="BoilerMate.Views.NewItemPage"
              Title="New Quote">
@@ -13,42 +14,265 @@
     </ContentPage.ToolbarItems>
     
     <ContentPage.Content>
-        <ScrollView Orientation="Both" Padding="0" VerticalOptions="FillAndExpand" VerticalScrollBarVisibility="Never">
+        <ScrollView Orientation="Both" Padding="0" HorizontalOptions="FillAndExpand" VerticalScrollBarVisibility="Never">
             <StackLayout Spacing="10" Padding="10">
 
-                <Label Text="Text" FontSize="Medium" />
-            <Entry Text="{Binding Item.Text}" d:Text="Item name" FontSize="Small" />
-            
-            <Label Text="Description" FontSize="Medium" />
-            <Editor Text="{Binding Item.Description}" d:Text="Item description" FontSize="Small" Margin="0" />
-            
-            <Label Text="First Name" FontSize="Medium" />
-            <Editor Text="{Binding Item.FirstName}" d:Text="Clients first name" FontSize="Small" Margin="0" />
-            
-            <Label Text="Last Name" FontSize="Medium" />
-            <Editor Text="{Binding Item.LastName}" d:Text="Clients last name." FontSize="Small" Margin="0" />
-            
-            <Label Text="House Number" FontSize="Medium" />
-            <Editor Text="{Binding Item.HouseNumber}" d:Text="House number" FontSize="Small" Margin="0" />
-            
-            <Label Text="Address Line 1" FontSize="Medium" />
-            <Editor Text="{Binding Item.AddressLine1}" d:Text="Address line 1" FontSize="Small" Margin="0" />
-            
-            <Label Text="Address Line 2" FontSize="Medium" />
-            <Editor Text="{Binding Item.AddressLine2}" d:Text="Address line 2" FontSize="Small" Margin="0" />
-            
-            <Label Text="Address Line 3" FontSize="Medium" />
-            <Editor Text="{Binding Item.AddressLine3}" d:Text="Address line 3" FontSize="Small" Margin="0" />
+                <expandable:ExpandableView>
+                    <expandable:ExpandableView.PrimaryView>
+                        <StackLayout Orientation="Vertical">
+                            <Label Text="Marketing Details" FontSize="20" VerticalTextAlignment="Center"/>                           
+                        </StackLayout>
+                    </expandable:ExpandableView.PrimaryView>
+                    <expandable:ExpandableView.SecondaryViewTemplate>
+                        <DataTemplate>
+                            <StackLayout Padding="5">
 
-                <Grid>
-                    <Grid.RowDefinitions>
-                        <RowDefinition Height="*" />
-                        <RowDefinition Height="Auto" />
-                    </Grid.RowDefinitions>
+                               <Label Text="Survey Date  Time" FontSize="Medium" />
+                                <Entry Text="{Binding Item.SurveyDateTime}" d:Text="Survey Date Time" FontSize="Small" />
+
+                                <Label Text="Marketing" FontSize="Medium" />
+                                <Entry Text="{Binding Item.Marketing}" d:Text="Marketing Detail" FontSize="Small" />
+
+                                <Label Text="First Name" FontSize="Medium" />
+                                <Editor Text="{Binding Item.FirstName}" d:Text="Clients first name" FontSize="Small" Margin="0" />
+
+                                <Label Text="Last Name" FontSize="Medium" />
+                                <Editor Text="{Binding Item.LastName}" d:Text="Clients last name." FontSize="Small" Margin="0" />
+
+                                <Label Text="House Number" FontSize="Medium" />
+                                <Editor Text="{Binding Item.HouseNumber}" d:Text="House number" FontSize="Small" Margin="0" />
+
+                                <Label Text="Address Line 1" FontSize="Medium" />
+                                <Editor Text="{Binding Item.AddressLine1}" d:Text="Address line 1" FontSize="Small" Margin="0" />
+
+                                <Label Text="Address Line 2" FontSize="Medium" />
+                                <Editor Text="{Binding Item.AddressLine2}" d:Text="Address line 2" FontSize="Small" Margin="0" />
+
+                                <Label Text="Address Line 3" FontSize="Medium" />
+                                <Editor Text="{Binding Item.AddressLine3}" d:Text="Address line 3" FontSize="Small" Margin="0" />
+
+                                <Label Text="Postcode" FontSize="Medium" />
+                                <Entry Text="{Binding Item.Postcode}" d:Text="Postal Code" FontSize="Small" />
+
+                                <Label Text="Mobile Phone Number" FontSize="Medium" />
+                                <Editor Text="{Binding Item.MobilePhone}" d:Text="Mobile Number" FontSize="Small" Margin="0" />
+
+                                <Label Text="Home Phone Number" FontSize="Medium" />
+                                <Editor Text="{Binding Item.HomePhone}" d:Text="home Phone Number" FontSize="Small" Margin="0" />
+
+                                <Label Text="Email Address" FontSize="Medium" />
+                                <Editor Text="{Binding Item.EmailAddress}" d:Text="Email Address" FontSize="Small" Margin="0" />
+
+                                <Label Text="Description" FontSize="Medium" />
+                                <Editor Text="{Binding Item.Description}" d:Text="Item description" FontSize="Small" Margin="0" />
+
+                            </StackLayout>
+                        </DataTemplate>
+                    </expandable:ExpandableView.SecondaryViewTemplate>
+                </expandable:ExpandableView>
+
+                <expandable:ExpandableView>
+                    <expandable:ExpandableView.PrimaryView>
+                        <StackLayout Orientation="Vertical">
+                            <Label Text="Existing Boiler Details" FontSize="20" VerticalTextAlignment="Center"/>
+                            <!--<Image x:Name="arrow2" Source="arrow_drop_down.png" HeightRequest="40"  HorizontalOptions="FillAndExpand"/>-->
+                        </StackLayout>
+                    </expandable:ExpandableView.PrimaryView>
+                    
+                    <expandable:ExpandableView.SecondaryViewTemplate>
+                        <DataTemplate>
+                            <StackLayout Padding="5">
+                                
+                                <Label Text="Boiler" FontSize="Medium" />
+                                <Editor Text="{Binding Item.Boiler}" d:Text="Boiler Type" FontSize="Small" Margin="0" />
+
+                                <Label Text="Flue" FontSize="Medium" />
+                                <Editor Text="{Binding Item.Flue}" d:Text="Flule Type" FontSize="Small" Margin="0" />
+
+                                <Label Text="Location" FontSize="Medium" />
+                                <Editor Text="{Binding Item.Location}" d:Text="Boiler Location" FontSize="Small" Margin="0" />
+
+                                <Label Text="Boiler Gas Supply" FontSize="Medium" />                                
+                                <Picker  FontSize="Medium" SelectedIndexChanged="OnPickerChangedBoilerGasSupply" Margin="0">
+                                    <Picker.Items>
+                                        <x:String>15mm</x:String>
+                                        <x:String>22mm</x:String>
+                                        <x:String>3/4inch</x:String>
+                                        <x:String>1/2inch</x:String>                                        
+                                    </Picker.Items>
+                                </Picker>
+
+                                <Label Text="Walls" FontSize="Medium" />                             
+                                <Picker  FontSize="Medium" SelectedIndexChanged="OnPickerChangedWalls" Margin="0">
+                                    <Picker.Items>
+                                        <x:String>D/L</x:String>
+                                        <x:String>Solid</x:String>
+                                        <x:String>TF</x:String>
+                                    </Picker.Items>
+                                </Picker>
+
+                                <Label Text="Loft Ladder" FontSize="Medium" />                   
+                                <CheckBox  IsChecked="False" CheckedChanged="SetLoftPropertyValue" Margin="0"></CheckBox>                                
+                               
+
+                            </StackLayout>
+                        </DataTemplate>
+                    </expandable:ExpandableView.SecondaryViewTemplate>
+                </expandable:ExpandableView>
+
+                <expandable:ExpandableView>
+                    <expandable:ExpandableView.PrimaryView>
+                        <StackLayout Orientation="Vertical">
+                            <Label Text="Existing Radiators Details" FontSize="20" VerticalTextAlignment="Center"/>
+                            <!--<Image x:Name="arrow21" Source="arrow_drop_down.png" HeightRequest="40"  HorizontalOptions="FillAndExpand"/>-->
+                        </StackLayout>
+                    </expandable:ExpandableView.PrimaryView>
+                    <expandable:ExpandableView.SecondaryViewTemplate>
+                        <DataTemplate>
+                            <StackLayout Padding="2">
+
+                                <Label Text="Down" FontSize="Medium" />
+                                <Picker  FontSize="Medium" SelectedIndexChanged="OnPickerChangedDown" Margin="0">
+                                    <Picker.Items>
+                                        <x:String>1</x:String>
+                                        <x:String>2</x:String>
+                                        <x:String>3</x:String>
+                                        <x:String>4</x:String>
+                                        <x:String>5</x:String>
+                                        <x:String>6</x:String>
+                                        <x:String>7</x:String>
+                                        <x:String>8</x:String>
+                                        <x:String>9</x:String>
+                                        <x:String>10</x:String>
+                                    </Picker.Items>
+                                </Picker>
+
+                                <Label Text="Up" FontSize="Medium" />
+                                <Picker  FontSize="Medium" SelectedIndexChanged="OnPickerChangedUp" Margin="0">
+                                    <Picker.Items>
+                                        <x:String>1</x:String>
+                                        <x:String>2</x:String>
+                                        <x:String>3</x:String>
+                                        <x:String>4</x:String>
+                                        <x:String>5</x:String>
+                                        <x:String>6</x:String>
+                                        <x:String>7</x:String>
+                                        <x:String>8</x:String>
+                                        <x:String>9</x:String>
+                                        <x:String>10</x:String>
+                                    </Picker.Items>
+                                </Picker>
+
+                                <Label Text="Towel Radiators" FontSize="Medium" />
+                                <Picker  FontSize="Medium" SelectedIndexChanged="OnPickerChangedTowelRads" Margin="0">
+                                    <Picker.Items>
+                                        <x:String>1</x:String>
+                                        <x:String>2</x:String>
+                                        <x:String>3</x:String>
+                                        <x:String>4</x:String>
+                                        <x:String>5</x:String>
+                                        <x:String>6</x:String>
+                                        <x:String>7</x:String>
+                                        <x:String>8</x:String>
+                                        <x:String>9</x:String>
+                                        <x:String>10</x:String>
+                                    </Picker.Items>
+                                </Picker>
+
+                                <Label Text="Pipe Sizes" FontSize="Medium" />
+                                <Picker  FontSize="Medium" SelectedIndexChanged="OnPickerChangedPipeSize" Margin="0">
+                                    <Picker.Items>
+                                        <x:String>8mm</x:String>
+                                        <x:String>10mm</x:String>
+                                        <x:String>12mm</x:String>
+                                        <x:String>15mm</x:String>
+                                    </Picker.Items>
+                                </Picker>
+
+                                <Label Text="Existing Shower" FontSize="Medium" />
+                                <Picker  FontSize="Medium" SelectedIndexChanged="OnPickerChangedShower" Margin="0">
+                                    <Picker.Items>
+                                        <x:String>P</x:String>
+                                        <x:String>E</x:String>
+                                        <x:String>T</x:String>                                     
+                                    </Picker.Items>
+                                </Picker>
+
+                                <Label Text="Valve" FontSize="Medium" />
+                                <Picker  FontSize="Medium" SelectedIndexChanged="OnPickerChangedValve" Margin="0">
+                                    <Picker.Items>
+                                        <x:String>3P22</x:String>
+                                        <x:String>2P22</x:String>
+                                        <x:String>2P28</x:String>
+                                        <x:String>None</x:String>
+                                    </Picker.Items>
+                                </Picker>
+                                
+                                <Label Text="GR FP" FontSize="Medium" />
+                                <Editor Text="{Binding Item.GRFP}" d:Text="GR FP" FontSize="Small" Margin="0" />
+
+                                <Label Text="Pump" FontSize="Medium" />
+                                <Picker  FontSize="Medium" SelectedIndexChanged="OnPickerChangedPump" Margin="0">
+                                    <Picker.Items>
+                                        <x:String>5m</x:String>
+                                        <x:String>6m</x:String>                                     
+                                    </Picker.Items>
+                                </Picker>
+
+                                <Label Text="Cylinder" FontSize="Medium" />
+                                <Picker  FontSize="Medium" SelectedIndexChanged="OnPickerChangedCylinder" Margin="0">
+                                    <Picker.Items>
+                                        <x:String>900x450</x:String>
+                                        <x:String>1050x450</x:String>
+                                        <x:String>1200x450</x:String>
+                                        <x:String>900x400</x:String>
+                                        <x:String>Other</x:String>
+                                    </Picker.Items>
+                                </Picker>
+
+                                <Label Text="Controls Location" FontSize="Medium" />
+                                <Picker  FontSize="Medium" SelectedIndexChanged="OnPickerChangedLocationControls" Margin="0">
+                                    <Picker.Items>
+                                        <x:String>A/C</x:String>
+                                        <x:String>Loft</x:String>
+                                        <x:String>T-T</x:String>
+                                    </Picker.Items>
+                                </Picker>
+
+                                <Label Text="Pump Location" FontSize="Medium" />
+                                <Picker  FontSize="Medium" SelectedIndexChanged="OnPickerChangedLocationPump" Margin="0">
+                                    <Picker.Items>
+                                        <x:String>FT</x:String>
+                                        <x:String>?</x:String>
+                                        <x:String>?</x:String>
+                                    </Picker.Items>
+                                </Picker>
+
+                            </StackLayout>
+                        </DataTemplate>
+                    </expandable:ExpandableView.SecondaryViewTemplate>
+                </expandable:ExpandableView>
+
+                <expandable:ExpandableView>
+                    <expandable:ExpandableView.PrimaryView>
+                        <StackLayout Orientation="Vertical">
+                            <Label Text="Requirements" FontSize="20" VerticalTextAlignment="Center"/>                           
+                        </StackLayout>
+                    </expandable:ExpandableView.PrimaryView>
+                    <expandable:ExpandableView.SecondaryViewTemplate>
+                        <DataTemplate>
+                            <StackLayout Padding="2">
+
+                                
+                                
+                                
+                            </StackLayout>
+                        </DataTemplate>
+                    </expandable:ExpandableView.SecondaryViewTemplate>
+                </expandable:ExpandableView>
 
                     <Image x:Name="PhotoImage" />
-                    <Button x:Name="CameraButton" Text="Take Photo" Grid.Row="1" />
-                </Grid>
+                    <Button x:Name="CameraButton" Text="Take Photo" Grid.Row="1" />                
                 
             </StackLayout>
         </ScrollView>
