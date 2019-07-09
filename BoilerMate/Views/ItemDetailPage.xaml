@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="BoilerMate.Views.ItemDetailPage"
+             Title="{Binding Title}">
+    
+    <ScrollView Orientation="Both" Padding="0" VerticalOptions="FillAndExpand" VerticalScrollBarVisibility="Never">
+        <StackLayout Spacing="20" Padding="15">
+            
+            <Label Text="Text:" FontSize="Medium" />
+            <Label Text="{Binding Item.Text}" d:Text="Item name" FontSize="Small"/>
+            
+            <Label Text="Description:" FontSize="Medium" />
+            <Label Text="{Binding Item.Description}" d:Text="Item description" FontSize="Small"/>
+
+            <Label Text="First Name" FontSize="Medium" />
+            <Label Text="{Binding Item.FirstName}" d:Text="Clients first name" FontSize="Small"  />
+
+            <Label Text="Last Name" FontSize="Medium" />
+            <Label Text="{Binding Item.LastName}" d:Text="Clients last name." FontSize="Small"  />
+
+            <Label Text="House Number" FontSize="Medium" />
+            <Label Text="{Binding Item.HouseNumber}" d:Text="House number" FontSize="Small" />
+
+            <Label Text="Address Line 1" FontSize="Medium" />
+            <Label Text="{Binding Item.AddressLine1}" d:Text="Address line 1" FontSize="Small" />
+
+            <Label Text="Address Line 2" FontSize="Medium" />
+            <Label Text="{Binding Item.AddressLine2}" d:Text="Address line 2" FontSize="Small" />
+
+            <Label Text="Address Line 3" FontSize="Medium" />
+            <Label Text="{Binding Item.AddressLine3}" d:Text="Address line 3" FontSize="Small" />
+
+            <Image x:Name="PhotoImageDisplay"   VerticalOptions="Center" HorizontalOptions="Center" WidthRequest="60" HeightRequest="60">
+                <Image.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="ZoomSelectedImageAsync" NumberOfTapsRequired="1"/>
+                </Image.GestureRecognizers>                
+            </Image>
+
+            <Button x:Name="ExportButton" Text="Export" >
+                <Button.GestureRecognizers>
+                    <TapGestureRecognizer   NumberOfTapsRequired="1" />
+                </Button.GestureRecognizers>
+            </Button>
+
+        </StackLayout>
+    </ScrollView>
+</ContentPage>
