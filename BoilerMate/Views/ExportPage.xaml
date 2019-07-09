@@ -9,12 +9,8 @@
              Title="{Binding Title}">
     
     <ContentPage.Content>
-        <StackLayout>
-
-            <Button Text="Pick File"  HorizontalOptions="Center"  
-               VerticalOptions="Center"/>
-            <Label Text="File Is :" x:Name="FileName"/>
-
+        <StackLayout>           
+            
             <StackLayout>
                 <ListView x:Name="ExportsListView"
                 ItemsSource="{Binding Items}"
@@ -36,6 +32,8 @@
                         <DataTemplate>
                             <ViewCell>
                                 <StackLayout Padding="10">
+                                  
+
                                     <expandable:ExpandableView>
                                         <expandable:ExpandableView.PrimaryView>
                                             <StackLayout Orientation="Vertical">
@@ -46,7 +44,7 @@
                                         <expandable:ExpandableView.SecondaryViewTemplate>
                                             <DataTemplate>
                                                 <StackLayout Padding="2">
-                                                    <Button Text="Create PDF" ></Button>
+                                                    <Button x:Name="PDFConvertButton" Clicked="GeneratePDFAsync" Text="Create PDF" ></Button>
                                                 </StackLayout>
                                             </DataTemplate>
                                         </expandable:ExpandableView.SecondaryViewTemplate>

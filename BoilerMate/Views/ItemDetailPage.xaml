@@ -46,7 +46,7 @@
                             <Label Text="{Binding Item.AddressLine3}" d:Text="Address line 3" FontSize="Small" Margin="0" />
 
                             <Label Text="Postcode" FontSize="Medium" />
-                            <Entry Text="{Binding Item.Postcode}" d:Text="Postal Code" FontSize="Small" />
+                            <Label Text="{Binding Item.Postcode}" d:Text="Postal Code" FontSize="Small" />
 
                             <Label Text="Mobile Phone Number" FontSize="Medium" />
                             <Label Text="{Binding Item.MobilePhone}" d:Text="Mobile Number" FontSize="Small" Margin="0" />
@@ -92,7 +92,7 @@
                             <Label Text="{Binding Item.Walls}" d:Text="Boiler Location" FontSize="Small" Margin="0" />
 
                             <Label Text="Loft Ladder" FontSize="Medium" />
-                            <CheckBox  IsChecked="{Binding Item.LoftLader}"  Margin="0"></CheckBox>
+                            <CheckBox    IsChecked="{Binding Item.LoftLader}"  Margin="0"></CheckBox>
 
 
                         </StackLayout>
@@ -147,7 +147,6 @@
                     </DataTemplate>
                 </expandable:ExpandableView.SecondaryViewTemplate>
             </expandable:ExpandableView>
-
 
             <Image x:Name="PhotoImageDisplay"   VerticalOptions="Center" HorizontalOptions="Center" WidthRequest="60" HeightRequest="60">
                 <Image.GestureRecognizers>
