@@ -1,4 +1,5 @@
 ﻿using BoilerMate.Models;
+using BoilerMate.Services;
 using BoilerMate.ViewModels;
 using System;
 using System.ComponentModel;
@@ -15,7 +16,8 @@ namespace BoilerMate.Views
         public ItemsPage()
         {
             InitializeComponent();
-
+            //SQLiteStore context = new SQLiteStore();
+            //context.DeleteTable("PreviousJobs");
             BindingContext = viewModel = new ItemsViewModel();
         }
 

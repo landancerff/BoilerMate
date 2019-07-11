@@ -41,6 +41,23 @@ namespace BoilerMate.Services
                 }               
             }
 
+            public List<JobReport> GetSpecificJobAsync(int id)
+            {
+
+                if (context.TableExists("PreviousJobs"))
+                {
+                    return database.Query<JobReport>($"Select * From PreviousJobs where id={id}");
+                }
+                else
+                {
+                    if (context.CreateTableAsync("PreviousJobs"))
+                    {
+                        return database.Query<JobReport>("Select * From PreviousJobs");
+                    }
+                    return null;
+                }
+            }
+
             public async Task<int> SaveJobAsync(JobReport job)
             {
               

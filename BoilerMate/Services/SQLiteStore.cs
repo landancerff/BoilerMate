@@ -56,9 +56,9 @@ namespace BoilerMate.Services
         
 
 
-        public bool DeleteTable()
+        public bool DeleteTable(string table)
         {
-            connection.Query<JobReport>("drop table PreviousJobs");
+            connection.Query<JobReport>($"drop table {table}");
 
             return true;
         }

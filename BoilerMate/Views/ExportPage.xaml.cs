@@ -13,44 +13,68 @@ using System.IO;
 using Android.Media;
 using Java.IO;
 using Android.Content;
+using System.Collections.Generic;
+using System.Windows.Input;
 
 namespace BoilerMate.Views
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]   
     public partial class ExportPage : ContentPage
     {
-        ItemDetailViewModel jobModel;
+       
         ExportViewModel viewModel;
+        DatabaseActions.DatabaseManager _context = new DatabaseActions.DatabaseManager();
+        ExportModel model = new ExportModel();
 
         public ExportPage()
         {    
-            InitializeComponent();
-            
+            InitializeComponent();            
+           
             BindingContext = viewModel = new ExportViewModel();
         }
 
-        private void SelectFile(object sender, EventArgs e)
+        private void SelectFile(object sender, SelectedItemChangedEventArgs args)
         {
-            // option to oen xlxs file or create pdf version
+
+             model = args.SelectedItem as ExportModel;
+            if (model == null) return;
+           
         }
 
-        private async void GeneratePDFAsync(object sender, EventArgs e)
+        private void ButtonClicked(object sender, EventArgs e)
         {
+            var button = sender as Button;
+            var job = button.BindingContext as ExportModel;
+            GeneratePDFAsync(job);
+        }
 
-            var pdfContent = jobModel.Item;  //needs to be selected Item's content.
+        private async void GeneratePDFAsync(ExportModel item)
+        {           
+            var pdfID = item.JobID;  
+            var job = _context.GetSpecificJobAsync(pdfID);
 
+            MemoryStream stream = new MemoryStream();
             PdfDocument document = new PdfDocument();
 
-
             PdfPage page = document.Pages.Add();
-            PdfGraphics graphics = page.Graphics;        
-            PdfFont font = new PdfStandardFont(PdfFontFamily.Helvetica, 20);           
-            graphics.DrawString("Hello World!!!", font, PdfBrushes.Black, new PointF(0, 0));      
-            MemoryStream stream = new MemoryStream();
+            PdfGraphics graphics = page.Graphics;
+            PdfFont font = new PdfStandardFont(PdfFontFamily.Helvetica, 20);
+
+
+            var pdfValues = $"{job[0].HouseNumber}, {job[0].AddressLine1}, {job[0].AddressLine2}, {job[0].Postcode}, \r\n {job[0].FirstName} {job[0].LastName}, \r\n {job[0].Description}, {job[0].MobilePhone}";
+                 
+            graphics.DrawString($"<b> Job Valuation Report <b>  \r\n " + pdfValues, font, PdfBrushes.Black, new PointF(0, 0));      
+         
+
+
+
             document.Save(stream);
 
-            document.Close(true);           
-           // await SaveAndView($"PDF_{item.HouseNumber}_{item.AddressLine1}.pdf", "application / pdf", stream);
+            document.Close(true); 
+            
+            await SaveAndView($"PDF_{item.FileName}_{item.ID}.pdf", "application / pdf", stream);
+
+            await DisplayAlert("Notification", "PDF Export has been created.", "OK");
         }
 
         public async Task SaveAndView(string fileName, String contentType, MemoryStream stream)
@@ -89,32 +113,10 @@ namespace BoilerMate.Views
                 Intent intent = new Intent(Intent.ActionView);
 
                 intent.AddFlags(ActivityFlags.NewTask);
-                intent.SetDataAndType(path, mimeType);
-
-                ///// add 'SAVE to DB' 
-
-
-                //System.Globalization.CultureInfo enUK = new System.Globalization.CultureInfo("en-GB");
-
-                //DateTime now = DateTime.Now;
-
-                //var outDate = Convert.ToDateTime(now, enUK);
-
-                //ExportModel exp = new ExportModel
-                //{
-                //    CreatedDate = outDate,
-                //    FileName = fileName,
-                //    FilePath = path.ToString()
-                //};
-
-               // await _context.SaveExportAsync(exp);
+                intent.SetDataAndType(path, mimeType);               
 
             }
         }
-
-
-
-
 
 
 

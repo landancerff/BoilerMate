@@ -36,7 +36,7 @@ namespace BoilerMate.Services
 
                 workbook.Close();
 
-               await SaveAndView($"Export_{item.HouseNumber}_{item.AddressLine1}.xlsx", "application/msexcel", stream);
+               await SaveAndView($"Export_{item.HouseNumber}_{item.AddressLine1}.xlsx", "application/msexcel", stream, item.Id);
 
                 return true;
             }
@@ -44,7 +44,7 @@ namespace BoilerMate.Services
                
 
         //Method to save document as a file in Android and view the saved document
-        public async Task SaveAndView(string fileName, String contentType, MemoryStream stream)
+        public async Task SaveAndView(string fileName, String contentType, MemoryStream stream, int id)
         {
             string root = null;
             //Get the root path in android device.
@@ -94,7 +94,8 @@ namespace BoilerMate.Services
                 ExportModel exp = new ExportModel{
                     CreatedDate = outDate,
                     FileName = fileName,
-                    FilePath = path.ToString()
+                    FilePath = path.ToString(),
+                    JobID = id
                 };
 
                await _context.SaveExportAsync(exp);

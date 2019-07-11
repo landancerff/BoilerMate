@@ -9,8 +9,7 @@
              Title="{Binding Title}">
     
     <ContentPage.Content>
-        <StackLayout>           
-            
+        <StackLayout>
             <StackLayout>
                 <ListView x:Name="ExportsListView"
                 ItemsSource="{Binding Items}"
@@ -20,7 +19,6 @@
                 IsPullToRefreshEnabled="true"
                 IsRefreshing="{Binding IsBusy, Mode=OneWay}"
                 CachingStrategy="RecycleElement">
-                    <!--ItemSelected="OnItemSelected"-->
                     <d:ListView.ItemsSource>
                         <x:Array Type="{x:Type x:String}">
                             <x:String>First Item</x:String>
@@ -28,23 +26,22 @@
                             <x:String>Third Item</x:String>
                         </x:Array>
                     </d:ListView.ItemsSource>
-                    <ListView.ItemTemplate>
+                    <ListView.ItemTemplate  >
                         <DataTemplate>
                             <ViewCell>
                                 <StackLayout Padding="10">
-                                  
-
                                     <expandable:ExpandableView>
                                         <expandable:ExpandableView.PrimaryView>
                                             <StackLayout Orientation="Vertical">
-                                                <Label Text="{Binding FileName}" d:Text="{Binding .}" LineBreakMode="NoWrap" Style="{DynamicResource ListItemTextStyle}" FontSize="13" />
-                                                <Label Text="{Binding CreatedDate}" d:Text="Item descripton" LineBreakMode="NoWrap" Style="{DynamicResource ListItemDetailTextStyle}" FontSize="11" />
+                                                <Label Text="{Binding FileName}" d:Text="{Binding .}" LineBreakMode="NoWrap" Style="{DynamicResource ListItemTextStyle}" FontSize="13" ></Label>
+                                                <Label Text="{Binding CreatedDate}" d:Text="Item descripton" LineBreakMode="NoWrap" Style="{DynamicResource ListItemDetailTextStyle}" FontSize="11" ></Label>
                                             </StackLayout>
                                         </expandable:ExpandableView.PrimaryView>
                                         <expandable:ExpandableView.SecondaryViewTemplate>
                                             <DataTemplate>
-                                                <StackLayout Padding="2">
-                                                    <Button x:Name="PDFConvertButton" Clicked="GeneratePDFAsync" Text="Create PDF" ></Button>
+                                                <StackLayout Padding="2" >
+                                                    <Button x:Name="PDFConvertButton" Clicked="ButtonClicked" Text="Create PDF" >                                                   
+                                                    </Button>
                                                 </StackLayout>
                                             </DataTemplate>
                                         </expandable:ExpandableView.SecondaryViewTemplate>
