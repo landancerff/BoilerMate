@@ -134,6 +134,7 @@ C:\Users\User\FreeTime_Projects\BoilerMate\BoilerMate.Android\obj\Debug\90\links
 C:\Users\User\FreeTime_Projects\BoilerMate\BoilerMate.Android\obj\Debug\90\linksrc\Xamarin.Forms.Platform.Android.dll
 C:\Users\User\FreeTime_Projects\BoilerMate\BoilerMate.Android\obj\Debug\90\linksrc\Xamarin.Forms.Platform.dll
 C:\Users\User\FreeTime_Projects\BoilerMate\BoilerMate.Android\obj\Debug\90\linksrc\Xamarin.Forms.Xaml.dll
+C:\Users\User\FreeTime_Projects\BoilerMate\BoilerMate.Android\obj\Debug\90\linksrc\XamiTextSharpLGPLv2.dll
 C:\Users\User\FreeTime_Projects\BoilerMate\BoilerMate.Android\obj\Debug\90\linksrc\netstandard.dll
 C:\Users\User\FreeTime_Projects\BoilerMate\BoilerMate.Android\obj\Debug\90\linksrc\System.Data.dll
 C:\Users\User\FreeTime_Projects\BoilerMate\BoilerMate.Android\obj\Debug\90\linksrc\System.Transactions.dll
@@ -329,6 +330,7 @@ C:\Users\User\FreeTime_Projects\BoilerMate\BoilerMate.Android\obj\Debug\90\andro
 C:\Users\User\FreeTime_Projects\BoilerMate\BoilerMate.Android\obj\Debug\90\android\assets\Xamarin.Forms.Platform.dll
 C:\Users\User\FreeTime_Projects\BoilerMate\BoilerMate.Android\obj\Debug\90\android\assets\Xamarin.Forms.Xaml.dll
 C:\Users\User\FreeTime_Projects\BoilerMate\BoilerMate.Android\obj\Debug\90\android\assets\Xamarin.Forms.Xaml.pdb
+C:\Users\User\FreeTime_Projects\BoilerMate\BoilerMate.Android\obj\Debug\90\android\assets\XamiTextSharpLGPLv2.dll
 C:\Users\User\FreeTime_Projects\BoilerMate\BoilerMate.Android\obj\Debug\90\android\src\mono\android\Seppuku.java
 C:\Users\User\FreeTime_Projects\BoilerMate\BoilerMate.Android\obj\Debug\90\android\src\mono\android\app\NotifyTimeZoneChanges.java
 C:\Users\User\FreeTime_Projects\BoilerMate\BoilerMate.Android\obj\Debug\90\android\assets\machine.config
@@ -377,12 +379,12 @@ C:\Users\User\FreeTime_Projects\BoilerMate\BoilerMate.Android\obj\Debug\90\andro
 C:\Users\User\FreeTime_Projects\BoilerMate\BoilerMate.Android\obj\Debug\90\android\src\mono\android\support\v4\media\session\MediaSessionCompat_OnActiveChangeListenerImplementor.java
 C:\Users\User\FreeTime_Projects\BoilerMate\BoilerMate.Android\obj\Debug\90\android\src\mono\android\support\v4\content\Loader_OnLoadCanceledListenerImplementor.java
 C:\Users\User\FreeTime_Projects\BoilerMate\BoilerMate.Android\obj\Debug\90\android\src\mono\android\support\v4\content\Loader_OnLoadCompleteListenerImplementor.java
-C:\Users\User\FreeTime_Projects\BoilerMate\BoilerMate.Android\obj\Debug\90\android\src\android\support\v7\widget\Toolbar_NavigationOnClickEventDispatcher.java
 C:\Users\User\FreeTime_Projects\BoilerMate\BoilerMate.Android\obj\Debug\90\android\src\mono\android\support\v4\app\FragmentManager_OnBackStackChangedListenerImplementor.java
 C:\Users\User\FreeTime_Projects\BoilerMate\BoilerMate.Android\obj\Debug\90\android\src\mono\android\support\v4\app\SharedElementCallback_OnSharedElementsReadyListenerImplementor.java
+C:\Users\User\FreeTime_Projects\BoilerMate\BoilerMate.Android\obj\Debug\90\android\src\android\support\v7\widget\Toolbar_NavigationOnClickEventDispatcher.java
 C:\Users\User\FreeTime_Projects\BoilerMate\BoilerMate.Android\obj\Debug\90\android\src\android\support\v7\recyclerview\R.java
-C:\Users\User\FreeTime_Projects\BoilerMate\BoilerMate.Android\obj\Debug\90\android\src\android\support\v7\mediarouter\R.java
 C:\Users\User\FreeTime_Projects\BoilerMate\BoilerMate.Android\obj\Debug\90\android\src\mono\android\support\v13\view\inputmethod\InputConnectionCompat_OnCommitContentListenerImplementor.java
+C:\Users\User\FreeTime_Projects\BoilerMate\BoilerMate.Android\obj\Debug\90\android\src\android\support\v7\mediarouter\R.java
 C:\Users\User\FreeTime_Projects\BoilerMate\BoilerMate.Android\obj\Debug\90\android\src\android\support\v7\cardview\R.java
 C:\Users\User\FreeTime_Projects\BoilerMate\BoilerMate.Android\obj\Debug\90\android\src\mono\android\support\v13\view\DragStartHelper_OnDragStartListenerImplementor.java
 C:\Users\User\FreeTime_Projects\BoilerMate\BoilerMate.Android\obj\Debug\90\android\src\android\support\v7\appcompat\R.java
@@ -398,6 +400,8 @@ C:\Users\User\FreeTime_Projects\BoilerMate\BoilerMate.Android\obj\Debug\90\andro
 C:\Users\User\FreeTime_Projects\BoilerMate\BoilerMate.Android\obj\Debug\90\android\src\mono\android\support\design\widget\TabLayout_BaseOnTabSelectedListenerImplementor.java
 C:\Users\User\FreeTime_Projects\BoilerMate\BoilerMate.Android\obj\Debug\90\android\src\android\support\transition\R.java
 C:\Users\User\FreeTime_Projects\BoilerMate\BoilerMate.Android\obj\Debug\90\android\src\mono\android\support\design\chip\ChipGroup_OnCheckedChangeListenerImplementor.java
+C:\Users\User\FreeTime_Projects\BoilerMate\BoilerMate.Android\obj\Debug\90\android\src\android\support\mediacompat\R.java
+C:\Users\User\FreeTime_Projects\BoilerMate\BoilerMate.Android\obj\Debug\90\android\src\android\support\design\widget\Snackbar_SnackbarActionClickImplementor.java
 C:\Users\User\FreeTime_Projects\BoilerMate\BoilerMate.Android\obj\Debug\90\android\src\md51558244f76c53b6aeda52c8a337f2c37\ActionSheetRenderer.java
 C:\Users\User\FreeTime_Projects\BoilerMate\BoilerMate.Android\obj\Debug\90\android\src\md51558244f76c53b6aeda52c8a337f2c37\ActivityIndicatorRenderer.java
 C:\Users\User\FreeTime_Projects\BoilerMate\BoilerMate.Android\obj\Debug\90\android\src\md51558244f76c53b6aeda52c8a337f2c37\AHorizontalScrollView.java
@@ -546,8 +550,6 @@ C:\Users\User\FreeTime_Projects\BoilerMate\BoilerMate.Android\obj\Debug\90\andro
 C:\Users\User\FreeTime_Projects\BoilerMate\BoilerMate.Android\obj\Debug\90\android\src\md51558244f76c53b6aeda52c8a337f2c37\VisualElementTracker_AttachTracker.java
 C:\Users\User\FreeTime_Projects\BoilerMate\BoilerMate.Android\obj\Debug\90\android\src\md51558244f76c53b6aeda52c8a337f2c37\WebViewRenderer.java
 C:\Users\User\FreeTime_Projects\BoilerMate\BoilerMate.Android\obj\Debug\90\android\src\md51558244f76c53b6aeda52c8a337f2c37\WebViewRenderer_JavascriptResult.java
-C:\Users\User\FreeTime_Projects\BoilerMate\BoilerMate.Android\obj\Debug\90\android\src\android\support\mediacompat\R.java
-C:\Users\User\FreeTime_Projects\BoilerMate\BoilerMate.Android\obj\Debug\90\android\src\android\support\design\widget\Snackbar_SnackbarActionClickImplementor.java
 C:\Users\User\FreeTime_Projects\BoilerMate\BoilerMate.Android\obj\Debug\90\android\src\android\support\design\R.java
 C:\Users\User\FreeTime_Projects\BoilerMate\BoilerMate.Android\obj\Debug\90\android\src\mono\android\app\ApplicationRegistration.java
 C:\Users\User\FreeTime_Projects\BoilerMate\BoilerMate.Android\obj\Debug\90\android\src\mono\android\app\XamarinAndroidEnvironmentVariables.java
@@ -555,15 +557,15 @@ C:\Users\User\FreeTime_Projects\BoilerMate\BoilerMate.Android\obj\Debug\90\andro
 C:\Users\User\FreeTime_Projects\BoilerMate\BoilerMate.Android\obj\Debug\90\android\src\android\support\customtabs\R.java
 C:\Users\User\FreeTime_Projects\BoilerMate\BoilerMate.Android\obj\Debug\90\android\src\android\support\coordinatorlayout\R.java
 C:\Users\User\FreeTime_Projects\BoilerMate\BoilerMate.Android\obj\Debug\90\android\src\mono\MonoPackageManager.java
-C:\Users\User\FreeTime_Projects\BoilerMate\BoilerMate.Android\obj\Debug\90\android\src\md5db28d8bc623a86db128b5e741db82730\MainActivity.java
 C:\Users\User\FreeTime_Projects\BoilerMate\BoilerMate.Android\obj\Debug\90\android\src\md5b5cbf9a5f989abac95309328170a059b\PopupPageRenderer.java
-C:\Users\User\FreeTime_Projects\BoilerMate\BoilerMate.Android\obj\Debug\90\android\src\android\support\compat\R.java
 C:\Users\User\FreeTime_Projects\BoilerMate\BoilerMate.Android\obj\Debug\90\android\src\md5f92e0daf340890c9667469657ee2ece8\ButtonRenderer.java
 C:\Users\User\FreeTime_Projects\BoilerMate\BoilerMate.Android\obj\Debug\90\android\src\md5f92e0daf340890c9667469657ee2ece8\FrameRenderer.java
 C:\Users\User\FreeTime_Projects\BoilerMate\BoilerMate.Android\obj\Debug\90\android\src\md5f92e0daf340890c9667469657ee2ece8\ImageRenderer.java
 C:\Users\User\FreeTime_Projects\BoilerMate\BoilerMate.Android\obj\Debug\90\android\src\md5f92e0daf340890c9667469657ee2ece8\LabelRenderer.java
-C:\Users\User\FreeTime_Projects\BoilerMate\BoilerMate.Android\obj\Debug\90\android\src\md54c2b093f5c3df46aefa5ba5513ac1fa4\RgGestureDetectorListener.java
+C:\Users\User\FreeTime_Projects\BoilerMate\BoilerMate.Android\obj\Debug\90\android\src\android\support\compat\R.java
+C:\Users\User\FreeTime_Projects\BoilerMate\BoilerMate.Android\obj\Debug\90\android\src\md5db28d8bc623a86db128b5e741db82730\MainActivity.java
 C:\Users\User\FreeTime_Projects\BoilerMate\BoilerMate.Android\obj\Debug\90\android\src\md54fe4aef201482be7d95d72c0c9bf0b33\FilePickerActivity.java
+C:\Users\User\FreeTime_Projects\BoilerMate\BoilerMate.Android\obj\Debug\90\android\src\md54c2b093f5c3df46aefa5ba5513ac1fa4\RgGestureDetectorListener.java
 C:\Users\User\FreeTime_Projects\BoilerMate\BoilerMate.Android\obj\Debug\90\android\src\md58432a647068b097f9637064b8985a5e0\ButtonRenderer.java
 C:\Users\User\FreeTime_Projects\BoilerMate\BoilerMate.Android\obj\Debug\90\android\src\md58432a647068b097f9637064b8985a5e0\CarouselPageRenderer.java
 C:\Users\User\FreeTime_Projects\BoilerMate\BoilerMate.Android\obj\Debug\90\android\src\md58432a647068b097f9637064b8985a5e0\FormsFragmentPagerAdapter_1.java
@@ -583,6 +585,8 @@ C:\Users\User\FreeTime_Projects\BoilerMate\BoilerMate.Android\obj\Debug\90\andro
 C:\Users\User\FreeTime_Projects\BoilerMate\BoilerMate.Android\obj\Debug\90\android\src\md58432a647068b097f9637064b8985a5e0\SwitchRenderer.java
 C:\Users\User\FreeTime_Projects\BoilerMate\BoilerMate.Android\obj\Debug\90\android\src\md58432a647068b097f9637064b8985a5e0\TabbedPageRenderer.java
 C:\Users\User\FreeTime_Projects\BoilerMate\BoilerMate.Android\obj\Debug\90\android\src\md58432a647068b097f9637064b8985a5e0\ViewRenderer_2.java
+C:\Users\User\FreeTime_Projects\BoilerMate\BoilerMate.Android\obj\Debug\90\android\src\md5dcb6eccdc824e0677ffae8ccdde42930\CustomTabsServiceConnectionImpl.java
+C:\Users\User\FreeTime_Projects\BoilerMate\BoilerMate.Android\obj\Debug\90\android\src\md5dcb6eccdc824e0677ffae8ccdde42930\KeepAliveService.java
 C:\Users\User\FreeTime_Projects\BoilerMate\BoilerMate.Android\obj\Debug\90\android\src\md5d630c3d3bfb5f5558520331566132d97\AccelerometerListener.java
 C:\Users\User\FreeTime_Projects\BoilerMate\BoilerMate.Android\obj\Debug\90\android\src\md5d630c3d3bfb5f5558520331566132d97\ActivityLifecycleContextListener.java
 C:\Users\User\FreeTime_Projects\BoilerMate\BoilerMate.Android\obj\Debug\90\android\src\md5d630c3d3bfb5f5558520331566132d97\BarometerListener.java
@@ -596,8 +600,6 @@ C:\Users\User\FreeTime_Projects\BoilerMate\BoilerMate.Android\obj\Debug\90\andro
 C:\Users\User\FreeTime_Projects\BoilerMate\BoilerMate.Android\obj\Debug\90\android\src\md5d630c3d3bfb5f5558520331566132d97\SensorListener.java
 C:\Users\User\FreeTime_Projects\BoilerMate\BoilerMate.Android\obj\Debug\90\android\src\md5d630c3d3bfb5f5558520331566132d97\SingleLocationListener.java
 C:\Users\User\FreeTime_Projects\BoilerMate\BoilerMate.Android\obj\Debug\90\android\src\md5d630c3d3bfb5f5558520331566132d97\TextToSpeechImplementation.java
-C:\Users\User\FreeTime_Projects\BoilerMate\BoilerMate.Android\obj\Debug\90\android\src\md5dcb6eccdc824e0677ffae8ccdde42930\CustomTabsServiceConnectionImpl.java
-C:\Users\User\FreeTime_Projects\BoilerMate\BoilerMate.Android\obj\Debug\90\android\src\md5dcb6eccdc824e0677ffae8ccdde42930\KeepAliveService.java
 C:\Users\User\FreeTime_Projects\BoilerMate\BoilerMate.Android\obj\Debug\90\android\src\md54cd65ac53ae710bff80022afc423e0f3\MediaPickerActivity.java
 C:\Users\User\FreeTime_Projects\BoilerMate\BoilerMate.Android\obj\Debug\90\android\src\md52784b6b6564df579ab09ba8bad5c54dd\ActivityLifecycleContextListener.java
 C:\Users\User\FreeTime_Projects\BoilerMate\BoilerMate.Android\obj\Debug\90\android\bin\packaged_resources
@@ -612,5 +614,3 @@ C:\Users\User\FreeTime_Projects\BoilerMate\BoilerMate.Android\obj\Debug\90\stamp
 C:\Users\User\FreeTime_Projects\BoilerMate\BoilerMate.Android\obj\Debug\90\stamp\_GenerateJavaStubs.stamp
 C:\Users\User\FreeTime_Projects\BoilerMate\BoilerMate.Android\obj\Debug\90\stamp\_GeneratePackageManagerJava.stamp
 C:\Users\User\FreeTime_Projects\BoilerMate\BoilerMate.Android\obj\Debug\90\stamp\_ResolveLibraryProjectImports.stamp
-C:\Users\User\FreeTime_Projects\BoilerMate\BoilerMate.Android\obj\Debug\90\linksrc\XamiTextSharpLGPLv2.dll
-C:\Users\User\FreeTime_Projects\BoilerMate\BoilerMate.Android\obj\Debug\90\android\assets\XamiTextSharpLGPLv2.dll

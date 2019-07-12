@@ -53,24 +53,10 @@ namespace BoilerMate.Views
             var pdfID = item.JobID;  
             var job = _context.GetSpecificJobAsync(pdfID);
 
-            MemoryStream stream = new MemoryStream();
-            PdfDocument document = new PdfDocument();
-
-            PdfPage page = document.Pages.Add();
-            PdfGraphics graphics = page.Graphics;
-            PdfFont font = new PdfStandardFont(PdfFontFamily.Helvetica, 20);
+            PDFCreator pdfnew = new PDFCreator();
+            var stream = pdfnew.testc();
 
 
-            var pdfValues = $"{job[0].HouseNumber}, {job[0].AddressLine1}, {job[0].AddressLine2}, {job[0].Postcode}, \r\n {job[0].FirstName} {job[0].LastName}, \r\n {job[0].Description}, {job[0].MobilePhone}";
-                 
-            graphics.DrawString($"<b> Job Valuation Report <b>  \r\n " + pdfValues, font, PdfBrushes.Black, new PointF(0, 0));      
-         
-
-
-
-            document.Save(stream);
-
-            document.Close(true); 
             
             await SaveAndView($"PDF_{item.FileName}_{item.ID}.pdf", "application / pdf", stream);
 

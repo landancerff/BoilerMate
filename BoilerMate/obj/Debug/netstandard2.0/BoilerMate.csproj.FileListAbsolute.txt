@@ -36,9 +36,9 @@ C:\Users\User\FreeTime_Projects\BoilerMate\BoilerMate\obj\Debug\netstandard2.0\V
 C:\Users\User\FreeTime_Projects\BoilerMate\BoilerMate\obj\Debug\netstandard2.0\BoilerMate.csproj.CoreCompileInputs.cache
 C:\Users\User\FreeTime_Projects\BoilerMate\BoilerMate\obj\Debug\netstandard2.0\BoilerMate.AssemblyInfoInputs.cache
 C:\Users\User\FreeTime_Projects\BoilerMate\BoilerMate\obj\Debug\netstandard2.0\BoilerMate.AssemblyInfo.cs
+C:\Users\User\FreeTime_Projects\BoilerMate\BoilerMate\obj\Debug\netstandard2.0\XamlC.stamp
 C:\Users\User\FreeTime_Projects\BoilerMate\BoilerMate\obj\Debug\netstandard2.0\BoilerMate.csproj.CopyComplete
 C:\Users\User\FreeTime_Projects\BoilerMate\BoilerMate\obj\Debug\netstandard2.0\BoilerMate.dll
 C:\Users\User\FreeTime_Projects\BoilerMate\BoilerMate\obj\Debug\netstandard2.0\ref\BoilerMate.dll
 C:\Users\User\FreeTime_Projects\BoilerMate\BoilerMate\obj\Debug\netstandard2.0\BoilerMate.pdb
 C:\Users\User\FreeTime_Projects\BoilerMate\BoilerMate\obj\Debug\netstandard2.0\BoilerMate.csprojAssemblyReference.cache
-C:\Users\User\FreeTime_Projects\BoilerMate\BoilerMate\obj\Debug\netstandard2.0\XamlC.stamp
