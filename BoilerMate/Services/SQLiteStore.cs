@@ -20,6 +20,24 @@ namespace BoilerMate.Services
             if (exists.Count > 0){ return true; }
             return false;
         }
+
+        public bool RequirementTableExists(string table)
+        {
+            var exists = connection.Query<RequirementSpec>($"SELECT name FROM sqlite_master WHERE type = 'table' AND name = '{table}';");
+            if (exists.Count > 0) { return true; }
+            return false;
+        }
+
+
+        public bool ExportTableExists(string table)
+        {
+            var exists = connection.Query<ExportModel>($"SELECT name FROM sqlite_master WHERE type = 'table' AND name = '{table}';");
+            if (exists.Count > 0) { return true; }
+            return false;
+        }
+
+
+
         public bool CreateTableAsync(string table)
         {
           var response =  connection.CreateTable<JobReport>();
@@ -32,14 +50,19 @@ namespace BoilerMate.Services
             return false;
         }
 
-
-
-        public bool ExportTableExists(string table)
+        public bool CreateTableRequirementAsync(string table)
         {
-            var exists = connection.Query<ExportModel>($"SELECT name FROM sqlite_master WHERE type = 'table' AND name = '{table}';");
-            if (exists.Count > 0) { return true; }
+            var response = connection.CreateTable<RequirementSpec>();
+
+            if (response == SQLite.CreateTableResult.Created)
+            {
+                return true;
+            }
+
             return false;
         }
+
+      
         public  bool CreateExportTableAsync(string table)
         {
             var response =  connection.CreateTable<ExportModel>();
@@ -52,8 +75,20 @@ namespace BoilerMate.Services
             return false;
         }
 
+        public bool CreateRequirementTableAsync(string table)
+        {
+            var response = connection.CreateTable<RequirementSpec>();
+            var i = string.Empty;
+            i = connection.GetTableInfo("RequirementSpec").ToString();
+            if (i != null) //  SQLite.CreateTableResult.Created)
+            {
+                return true;
+            }
+            return false;
+        }
 
-        
+
+
 
 
         public bool DeleteTable(string table)

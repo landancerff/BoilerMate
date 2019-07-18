@@ -10,7 +10,8 @@
     
     <ContentPage.ToolbarItems>
         <ToolbarItem Text="Cancel" Clicked="Cancel_Clicked" />
-        <ToolbarItem Text="Save" Clicked="Save_Clicked" />
+        <ToolbarItem Text="Next Page" Clicked="Next_Clicked" />
+        <!--<ToolbarItem Text="Save" Clicked="Save_Clicked" />-->
     </ContentPage.ToolbarItems>
     
     <ContentPage.Content>
@@ -253,23 +254,7 @@
                     </expandable:ExpandableView.SecondaryViewTemplate>
                 </expandable:ExpandableView>
 
-                <expandable:ExpandableView>
-                    <expandable:ExpandableView.PrimaryView>
-                        <StackLayout Orientation="Vertical">
-                            <Label Text="Requirements" FontSize="20" VerticalTextAlignment="Center"/>                           
-                        </StackLayout>
-                    </expandable:ExpandableView.PrimaryView>
-                    <expandable:ExpandableView.SecondaryViewTemplate>
-                        <DataTemplate>
-                            <StackLayout Padding="2">
-
-                                
-                                
-                                
-                            </StackLayout>
-                        </DataTemplate>
-                    </expandable:ExpandableView.SecondaryViewTemplate>
-                </expandable:ExpandableView>
+               
 
                     <Image x:Name="PhotoImage" />
                     <Button x:Name="CameraButton" Text="Take Photo" Grid.Row="1" />                

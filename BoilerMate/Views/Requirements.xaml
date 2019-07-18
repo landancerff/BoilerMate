@@ -1,0 +1,805 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:expandable="clr-namespace:Expandable;assembly=ExpandableView"
+             mc:Ignorable="d"
+             x:Class="BoilerMate.Views.Requirements"
+             Title="Job Requirements">
+
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="Cancel" Clicked="Cancel_Clicked" />
+        <ToolbarItem Text="Save" Clicked="Save_Clicked" />
+    </ContentPage.ToolbarItems>
+
+    <ContentPage.Content>
+        <StackLayout>
+            <Label Text="Welcome to Xamarin.Forms!"
+                VerticalOptions="CenterAndExpand" 
+                HorizontalOptions="CenterAndExpand" />
+            <expandable:ExpandableView>
+                <expandable:ExpandableView.PrimaryView>
+                    <StackLayout Orientation="Vertical">
+                        <Label Text="Requirements" FontSize="20" VerticalTextAlignment="Center"/>
+                    </StackLayout>
+                </expandable:ExpandableView.PrimaryView>
+                <expandable:ExpandableView.SecondaryViewTemplate>
+                    <DataTemplate>
+                        <StackLayout Padding="2">
+                            <Label Text="30Si Comp" FontSize="Medium" />
+                            <Picker SelectedIndexChanged="OnPickerChanged30Si" Margin="0" FontSize="Medium"> 
+                            <Picker.Items>
+                                <x:String>1</x:String>
+                                <x:String>2</x:String>
+                                <x:String>3</x:String>
+                                <x:String>4</x:String>
+                                <x:String>5</x:String>
+                                <x:String>6</x:String>
+                                <x:String>7</x:String>
+                                <x:String>8</x:String>
+                                <x:String>9</x:String>
+                                <x:String>10</x:String>
+                            </Picker.Items>
+                            </Picker>
+                        
+                            <Label Text="Junior 30i" FontSize="Medium" />
+                            <Picker SelectedIndexChanged="OnPickerChangedJunior30i" Margin="0" FontSize="Medium">
+                                <Picker.Items>
+                                    <x:String>1</x:String>
+                                    <x:String>2</x:String>
+                                    <x:String>3</x:String>
+                                    <x:String>4</x:String>
+                                    <x:String>5</x:String>
+                                    <x:String>6</x:String>
+                                    <x:String>7</x:String>
+                                    <x:String>8</x:String>
+                                    <x:String>9</x:String>
+                                    <x:String>10</x:String>
+                                </Picker.Items>
+                            </Picker>
+
+                            <Label Text="Flashing" FontSize="Medium" />
+                            <Picker SelectedIndexChanged="OnPickerChangedFlashing" Margin="0" FontSize="Medium">
+                                <Picker.Items>
+                                    <x:String>1</x:String>
+                                    <x:String>2</x:String>
+                                    <x:String>3</x:String>
+                                    <x:String>4</x:String>
+                                    <x:String>5</x:String>
+                                    <x:String>6</x:String>
+                                    <x:String>7</x:String>
+                                    <x:String>8</x:String>
+                                    <x:String>9</x:String>
+                                    <x:String>10</x:String>
+                                </Picker.Items>
+                            </Picker>
+
+                            <Label Text="H Flue" FontSize="Medium" />
+                            <Picker SelectedIndexChanged="OnPickerChangedHFlue" Margin="0" FontSize="Medium">
+                                <Picker.Items>
+                                    <x:String>1</x:String>
+                                    <x:String>2</x:String>
+                                    <x:String>3</x:String>
+                                    <x:String>4</x:String>
+                                    <x:String>5</x:String>
+                                    <x:String>6</x:String>
+                                    <x:String>7</x:String>
+                                    <x:String>8</x:String>
+                                    <x:String>9</x:String>
+                                    <x:String>10</x:String>
+                                </Picker.Items>
+                            </Picker>
+
+                            <Label Text="V. Flue" FontSize="Medium" />
+                            <Picker SelectedIndexChanged="OnPickerChangedVFlue" Margin="0" FontSize="Medium">
+                                <Picker.Items>
+                                    <x:String>1</x:String>
+                                    <x:String>2</x:String>
+                                    <x:String>3</x:String>
+                                    <x:String>4</x:String>
+                                    <x:String>5</x:String>
+                                    <x:String>6</x:String>
+                                    <x:String>7</x:String>
+                                    <x:String>8</x:String>
+                                    <x:String>9</x:String>
+                                    <x:String>10</x:String>
+                                </Picker.Items>
+                            </Picker>
+
+                            <Label Text="1M Ext" FontSize="Medium" />
+                            <Picker SelectedIndexChanged="OnPickerChanged1MExt" Margin="0" FontSize="Medium">
+                                <Picker.Items>
+                                    <x:String>1</x:String>
+                                    <x:String>2</x:String>
+                                    <x:String>3</x:String>
+                                    <x:String>4</x:String>
+                                    <x:String>5</x:String>
+                                    <x:String>6</x:String>
+                                    <x:String>7</x:String>
+                                    <x:String>8</x:String>
+                                    <x:String>9</x:String>
+                                    <x:String>10</x:String>
+                                </Picker.Items>
+                            </Picker>
+
+                            <Label Text="45 Degree" FontSize="Medium" />
+                            <Picker SelectedIndexChanged="OnPickerChanged45Degree" Margin="0" FontSize="Medium">
+                                <Picker.Items>
+                                    <x:String>1</x:String>
+                                    <x:String>2</x:String>
+                                    <x:String>3</x:String>
+                                    <x:String>4</x:String>
+                                    <x:String>5</x:String>
+                                    <x:String>6</x:String>
+                                    <x:String>7</x:String>
+                                    <x:String>8</x:String>
+                                    <x:String>9</x:String>
+                                    <x:String>10</x:String>
+                                </Picker.Items>
+                            </Picker>
+
+                            <Label Text="90 Degree" FontSize="Medium" />
+                            <Picker SelectedIndexChanged="OnPickerChanged90Degree" Margin="0" FontSize="Medium">
+                                <Picker.Items>
+                                    <x:String>1</x:String>
+                                    <x:String>2</x:String>
+                                    <x:String>3</x:String>
+                                    <x:String>4</x:String>
+                                    <x:String>5</x:String>
+                                    <x:String>6</x:String>
+                                    <x:String>7</x:String>
+                                    <x:String>8</x:String>
+                                    <x:String>9</x:String>
+                                    <x:String>10</x:String>
+                                </Picker.Items>
+                            </Picker>
+
+                            <Label Text="Plume Kit" FontSize="Medium" />
+                            <Picker SelectedIndexChanged="OnPickerChangedPlumeKit" Margin="0" FontSize="Medium">
+                                <Picker.Items>
+                                    <x:String>1</x:String>
+                                    <x:String>2</x:String>
+                                    <x:String>3</x:String>
+                                    <x:String>4</x:String>
+                                    <x:String>5</x:String>
+                                    <x:String>6</x:String>
+                                    <x:String>7</x:String>
+                                    <x:String>8</x:String>
+                                    <x:String>9</x:String>
+                                    <x:String>10</x:String>
+                                </Picker.Items>
+                            </Picker>
+
+                            <Label Text="Guard" FontSize="Medium" />
+                            <Picker SelectedIndexChanged="OnPickerChangedGuard" Margin="0" FontSize="Medium">
+                                <Picker.Items>
+                                    <x:String>1</x:String>
+                                    <x:String>2</x:String>
+                                    <x:String>3</x:String>
+                                    <x:String>4</x:String>
+                                    <x:String>5</x:String>
+                                    <x:String>6</x:String>
+                                    <x:String>7</x:String>
+                                    <x:String>8</x:String>
+                                    <x:String>9</x:String>
+                                    <x:String>10</x:String>
+                                </Picker.Items>
+                            </Picker>
+
+                            <Label Text="Shock Ar." FontSize="Medium" />
+                            <Picker SelectedIndexChanged="OnPickerChangedShockAr" Margin="0" FontSize="Medium">
+                                <Picker.Items>
+                                    <x:String>1</x:String>
+                                    <x:String>2</x:String>
+                                    <x:String>3</x:String>
+                                    <x:String>4</x:String>
+                                    <x:String>5</x:String>
+                                    <x:String>6</x:String>
+                                    <x:String>7</x:String>
+                                    <x:String>8</x:String>
+                                    <x:String>9</x:String>
+                                    <x:String>10</x:String>
+                                </Picker.Items>
+                            </Picker>
+
+                            <Label Text="Scale Red" FontSize="Medium" />
+                            <Picker SelectedIndexChanged="OnPickerChangedScaleRed" Margin="0" FontSize="Medium">
+                                <Picker.Items>
+                                    <x:String>1</x:String>
+                                    <x:String>2</x:String>
+                                    <x:String>3</x:String>
+                                    <x:String>4</x:String>
+                                    <x:String>5</x:String>
+                                    <x:String>6</x:String>
+                                    <x:String>7</x:String>
+                                    <x:String>8</x:String>
+                                    <x:String>9</x:String>
+                                    <x:String>10</x:String>
+                                </Picker.Items>
+                            </Picker>
+
+                            <Label Text="RF P.Stat" FontSize="Medium" />
+                            <Picker SelectedIndexChanged="OnPickerChangedREFPStat" Margin="0" FontSize="Medium">
+                                <Picker.Items>
+                                    <x:String>1</x:String>
+                                    <x:String>2</x:String>
+                                    <x:String>3</x:String>
+                                    <x:String>4</x:String>
+                                    <x:String>5</x:String>
+                                    <x:String>6</x:String>
+                                    <x:String>7</x:String>
+                                    <x:String>8</x:String>
+                                    <x:String>9</x:String>
+                                    <x:String>10</x:String>
+                                </Picker.Items>
+                            </Picker>
+
+                            <Label Text="F. Loop" FontSize="Medium" />
+                            <Picker SelectedIndexChanged="OnPickerChangedFLoop" Margin="0" FontSize="Medium">
+                                <Picker.Items>
+                                    <x:String>1</x:String>
+                                    <x:String>2</x:String>
+                                    <x:String>3</x:String>
+                                    <x:String>4</x:String>
+                                    <x:String>5</x:String>
+                                    <x:String>6</x:String>
+                                    <x:String>7</x:String>
+                                    <x:String>8</x:String>
+                                    <x:String>9</x:String>
+                                    <x:String>10</x:String>
+                                </Picker.Items>
+                            </Picker>
+
+                            <Label Text="X800" FontSize="Medium" />
+                            <Picker SelectedIndexChanged="OnPickerChangedX800" Margin="0" FontSize="Medium">
+                                <Picker.Items>
+                                    <x:String>1</x:String>
+                                    <x:String>2</x:String>
+                                    <x:String>3</x:String>
+                                    <x:String>4</x:String>
+                                    <x:String>5</x:String>
+                                    <x:String>6</x:String>
+                                    <x:String>7</x:String>
+                                    <x:String>8</x:String>
+                                    <x:String>9</x:String>
+                                    <x:String>10</x:String>
+                                </Picker.Items>
+                            </Picker>
+
+                            <Label Text="Inhibitor" FontSize="Medium" />
+                            <Picker SelectedIndexChanged="OnPickerChangedInhibitor" Margin="0" FontSize="Medium">
+                                <Picker.Items>
+                                    <x:String>1</x:String>
+                                    <x:String>2</x:String>
+                                    <x:String>3</x:String>
+                                    <x:String>4</x:String>
+                                    <x:String>5</x:String>
+                                    <x:String>6</x:String>
+                                    <x:String>7</x:String>
+                                    <x:String>8</x:String>
+                                    <x:String>9</x:String>
+                                    <x:String>10</x:String>
+                                </Picker.Items>
+                            </Picker>
+
+                            <Label Text="MB3" FontSize="Medium" />
+                            <Picker SelectedIndexChanged="OnPickerChangedMB3" Margin="0" FontSize="Medium">
+                                <Picker.Items>
+                                    <x:String>1</x:String>
+                                    <x:String>2</x:String>
+                                    <x:String>3</x:String>
+                                    <x:String>4</x:String>
+                                    <x:String>5</x:String>
+                                    <x:String>6</x:String>
+                                    <x:String>7</x:String>
+                                    <x:String>8</x:String>
+                                    <x:String>9</x:String>
+                                    <x:String>10</x:String>
+                                </Picker.Items>
+                            </Picker>
+
+                            <Label Text="TwinTech" FontSize="Medium" />
+                            <Picker SelectedIndexChanged="OnPickerChangedTwinTech" Margin="0" FontSize="Medium">
+                                <Picker.Items>
+                                    <x:String>1</x:String>
+                                    <x:String>2</x:String>
+                                    <x:String>3</x:String>
+                                    <x:String>4</x:String>
+                                    <x:String>5</x:String>
+                                    <x:String>6</x:String>
+                                    <x:String>7</x:String>
+                                    <x:String>8</x:String>
+                                    <x:String>9</x:String>
+                                    <x:String>10</x:String>
+                                </Picker.Items>
+                            </Picker>
+
+                            <Label Text="Condensafe" FontSize="Medium" />
+                            <Picker SelectedIndexChanged="OnPickerChangedCondensafe" Margin="0" FontSize="Medium">
+                                <Picker.Items>
+                                    <x:String>1</x:String>
+                                    <x:String>2</x:String>
+                                    <x:String>3</x:String>
+                                    <x:String>4</x:String>
+                                    <x:String>5</x:String>
+                                    <x:String>6</x:String>
+                                    <x:String>7</x:String>
+                                    <x:String>8</x:String>
+                                    <x:String>9</x:String>
+                                    <x:String>10</x:String>
+                                </Picker.Items>
+                            </Picker>
+
+                            <Label Text="Soak Away" FontSize="Medium" />
+                            <Picker SelectedIndexChanged="OnPickerChangedSoakAway" Margin="0" FontSize="Medium">
+                                <Picker.Items>
+                                    <x:String>1</x:String>
+                                    <x:String>2</x:String>
+                                    <x:String>3</x:String>
+                                    <x:String>4</x:String>
+                                    <x:String>5</x:String>
+                                    <x:String>6</x:String>
+                                    <x:String>7</x:String>
+                                    <x:String>8</x:String>
+                                    <x:String>9</x:String>
+                                    <x:String>10</x:String>
+                                </Picker.Items>
+                            </Picker>
+
+                            <Label Text="Cond Pump" FontSize="Medium" />
+                            <Picker SelectedIndexChanged="OnPickerChangedCondPump" Margin="0" FontSize="Medium">
+                                <Picker.Items>
+                                    <x:String>1</x:String>
+                                    <x:String>2</x:String>
+                                    <x:String>3</x:String>
+                                    <x:String>4</x:String>
+                                    <x:String>5</x:String>
+                                    <x:String>6</x:String>
+                                    <x:String>7</x:String>
+                                    <x:String>8</x:String>
+                                    <x:String>9</x:String>
+                                    <x:String>10</x:String>
+                                </Picker.Items>
+                            </Picker>
+
+                            <Label Text="12Ri" FontSize="Medium" />
+                            <Picker SelectedIndexChanged="OnPickerChanged12Ri" Margin="0" FontSize="Medium">
+                                <Picker.Items>
+                                    <x:String>1</x:String>
+                                    <x:String>2</x:String>
+                                    <x:String>3</x:String>
+                                    <x:String>4</x:String>
+                                    <x:String>5</x:String>
+                                    <x:String>6</x:String>
+                                    <x:String>7</x:String>
+                                    <x:String>8</x:String>
+                                    <x:String>9</x:String>
+                                    <x:String>10</x:String>
+                                </Picker.Items>
+                            </Picker>
+
+                            <Label Text="15Ri" FontSize="Medium" />
+                            <Picker SelectedIndexChanged="OnPickerChanged15Ri" Margin="0" FontSize="Medium">
+                                <Picker.Items>
+                                    <x:String>1</x:String>
+                                    <x:String>2</x:String>
+                                    <x:String>3</x:String>
+                                    <x:String>4</x:String>
+                                    <x:String>5</x:String>
+                                    <x:String>6</x:String>
+                                    <x:String>7</x:String>
+                                    <x:String>8</x:String>
+                                    <x:String>9</x:String>
+                                    <x:String>10</x:String>
+                                </Picker.Items>
+                            </Picker>
+
+                            <Label Text="18Ri" FontSize="Medium" />
+                            <Picker SelectedIndexChanged="OnPickerChanged18Ri" Margin="0" FontSize="Medium">
+                                <Picker.Items>
+                                    <x:String>1</x:String>
+                                    <x:String>2</x:String>
+                                    <x:String>3</x:String>
+                                    <x:String>4</x:String>
+                                    <x:String>5</x:String>
+                                    <x:String>6</x:String>
+                                    <x:String>7</x:String>
+                                    <x:String>8</x:String>
+                                    <x:String>9</x:String>
+                                    <x:String>10</x:String>
+                                </Picker.Items>
+                            </Picker>
+
+                            <Label Text="24Ri" FontSize="Medium" />
+                            <Picker SelectedIndexChanged="OnPickerChanged24Ri" Margin="0" FontSize="Medium">
+                                <Picker.Items>
+                                    <x:String>1</x:String>
+                                    <x:String>2</x:String>
+                                    <x:String>3</x:String>
+                                    <x:String>4</x:String>
+                                    <x:String>5</x:String>
+                                    <x:String>6</x:String>
+                                    <x:String>7</x:String>
+                                    <x:String>8</x:String>
+                                    <x:String>9</x:String>
+                                    <x:String>10</x:String>
+                                </Picker.Items>
+                            </Picker>
+
+                            <Label Text="18i" FontSize="Medium" />
+                            <Picker SelectedIndexChanged="OnPickerChanged18i" Margin="0" FontSize="Medium">
+                                <Picker.Items>
+                                    <x:String>1</x:String>
+                                    <x:String>2</x:String>
+                                    <x:String>3</x:String>
+                                    <x:String>4</x:String>
+                                    <x:String>5</x:String>
+                                    <x:String>6</x:String>
+                                    <x:String>7</x:String>
+                                    <x:String>8</x:String>
+                                    <x:String>9</x:String>
+                                    <x:String>10</x:String>
+                                </Picker.Items>
+                            </Picker>
+
+                            <Label Text="27i" FontSize="Medium" />
+                            <Picker SelectedIndexChanged="OnPickerChanged27i" Margin="0" FontSize="Medium">
+                                <Picker.Items>
+                                    <x:String>1</x:String>
+                                    <x:String>2</x:String>
+                                    <x:String>3</x:String>
+                                    <x:String>4</x:String>
+                                    <x:String>5</x:String>
+                                    <x:String>6</x:String>
+                                    <x:String>7</x:String>
+                                    <x:String>8</x:String>
+                                    <x:String>9</x:String>
+                                    <x:String>10</x:String>
+                                </Picker.Items>
+                            </Picker>
+
+                            <Label Text="Pump" FontSize="Medium" />
+                            <Picker SelectedIndexChanged="OnPickerChangedPump" Margin="0" FontSize="Medium">
+                                <Picker.Items>
+                                    <x:String>1</x:String>
+                                    <x:String>2</x:String>
+                                    <x:String>3</x:String>
+                                    <x:String>4</x:String>
+                                    <x:String>5</x:String>
+                                    <x:String>6</x:String>
+                                    <x:String>7</x:String>
+                                    <x:String>8</x:String>
+                                    <x:String>9</x:String>
+                                    <x:String>10</x:String>
+                                </Picker.Items>
+                            </Picker>
+
+                            <Label Text="Unions" FontSize="Medium" />
+                            <Picker SelectedIndexChanged="OnPickerChangedUnions" Margin="0" FontSize="Medium">
+                                <Picker.Items>
+                                    <x:String>1</x:String>
+                                    <x:String>2</x:String>
+                                    <x:String>3</x:String>
+                                    <x:String>4</x:String>
+                                    <x:String>5</x:String>
+                                    <x:String>6</x:String>
+                                    <x:String>7</x:String>
+                                    <x:String>8</x:String>
+                                    <x:String>9</x:String>
+                                    <x:String>10</x:String>
+                                </Picker.Items>
+                            </Picker>
+
+                            <Label Text="3P Control Pack" FontSize="Medium" />
+                            <Picker SelectedIndexChanged="OnPickerChanged3PControlPk" Margin="0" FontSize="Medium">
+                                <Picker.Items>
+                                    <x:String>1</x:String>
+                                    <x:String>2</x:String>
+                                    <x:String>3</x:String>
+                                    <x:String>4</x:String>
+                                    <x:String>5</x:String>
+                                    <x:String>6</x:String>
+                                    <x:String>7</x:String>
+                                    <x:String>8</x:String>
+                                    <x:String>9</x:String>
+                                    <x:String>10</x:String>
+                                </Picker.Items>
+                            </Picker>
+
+                            <Label Text="2P Cotnrol Pack" FontSize="Medium" />
+                            <Picker SelectedIndexChanged="OnPickerChanged2PControlPk" Margin="0" FontSize="Medium">
+                                <Picker.Items>
+                                    <x:String>1</x:String>
+                                    <x:String>2</x:String>
+                                    <x:String>3</x:String>
+                                    <x:String>4</x:String>
+                                    <x:String>5</x:String>
+                                    <x:String>6</x:String>
+                                    <x:String>7</x:String>
+                                    <x:String>8</x:String>
+                                    <x:String>9</x:String>
+                                    <x:String>10</x:String>
+                                </Picker.Items>
+                            </Picker>
+
+                            <Label Text="Immersion" FontSize="Medium" />
+                            <Picker SelectedIndexChanged="OnPickerChangedImmersion" Margin="0" FontSize="Medium">
+                                <Picker.Items>
+                                    <x:String>1</x:String>
+                                    <x:String>2</x:String>
+                                    <x:String>3</x:String>
+                                    <x:String>4</x:String>
+                                    <x:String>5</x:String>
+                                    <x:String>6</x:String>
+                                    <x:String>7</x:String>
+                                    <x:String>8</x:String>
+                                    <x:String>9</x:String>
+                                    <x:String>10</x:String>
+                                </Picker.Items>
+                            </Picker>
+
+                            <Label Text="Cylinder 900x450" FontSize="Medium" />
+                            <Picker SelectedIndexChanged="OnPickerChangedCylinder900x450" Margin="0" FontSize="Medium">
+                                <Picker.Items>
+                                    <x:String>1</x:String>
+                                    <x:String>2</x:String>
+                                    <x:String>3</x:String>
+                                    <x:String>4</x:String>
+                                    <x:String>5</x:String>
+                                    <x:String>6</x:String>
+                                    <x:String>7</x:String>
+                                    <x:String>8</x:String>
+                                    <x:String>9</x:String>
+                                    <x:String>10</x:String>
+                                </Picker.Items>
+                            </Picker>
+
+                            <Label Text="Cylinder 900x400" FontSize="Medium" />
+                            <Picker SelectedIndexChanged="OnPickerChangedCylinder900x400" Margin="0" FontSize="Medium">
+                                <Picker.Items>
+                                    <x:String>1</x:String>
+                                    <x:String>2</x:String>
+                                    <x:String>3</x:String>
+                                    <x:String>4</x:String>
+                                    <x:String>5</x:String>
+                                    <x:String>6</x:String>
+                                    <x:String>7</x:String>
+                                    <x:String>8</x:String>
+                                    <x:String>9</x:String>
+                                    <x:String>10</x:String>
+                                </Picker.Items>
+                            </Picker>
+
+                            <Label Text="Cylinder 1050x450" FontSize="Medium" />
+                            <Picker SelectedIndexChanged="OnPickerChangedCylinder1050x450" Margin="0" FontSize="Medium">
+                                <Picker.Items>
+                                    <x:String>1</x:String>
+                                    <x:String>2</x:String>
+                                    <x:String>3</x:String>
+                                    <x:String>4</x:String>
+                                    <x:String>5</x:String>
+                                    <x:String>6</x:String>
+                                    <x:String>7</x:String>
+                                    <x:String>8</x:String>
+                                    <x:String>9</x:String>
+                                    <x:String>10</x:String>
+                                </Picker.Items>
+                            </Picker>
+
+                            <Label Text="Cylinder 1200x450" FontSize="Medium" />
+                            <Picker SelectedIndexChanged="OnPickerChangedCylinder1200x450" Margin="0" FontSize="Medium">
+                                <Picker.Items>
+                                    <x:String>1</x:String>
+                                    <x:String>2</x:String>
+                                    <x:String>3</x:String>
+                                    <x:String>4</x:String>
+                                    <x:String>5</x:String>
+                                    <x:String>6</x:String>
+                                    <x:String>7</x:String>
+                                    <x:String>8</x:String>
+                                    <x:String>9</x:String>
+                                    <x:String>10</x:String>
+                                </Picker.Items>
+                            </Picker>
+
+                            <Label Text="Junction Box" FontSize="Medium" />
+                            <Picker SelectedIndexChanged="OnPickerChangedJunctionBox" Margin="0" FontSize="Medium">
+                                <Picker.Items>
+                                    <x:String>1</x:String>
+                                    <x:String>2</x:String>
+                                    <x:String>3</x:String>
+                                    <x:String>4</x:String>
+                                    <x:String>5</x:String>
+                                    <x:String>6</x:String>
+                                    <x:String>7</x:String>
+                                    <x:String>8</x:String>
+                                    <x:String>9</x:String>
+                                    <x:String>10</x:String>
+                                </Picker.Items>
+                            </Picker>
+
+                            <Label Text="Spur" FontSize="Medium" />
+                            <Picker SelectedIndexChanged="OnPickerChangedSpur" Margin="0" FontSize="Medium">
+                                <Picker.Items>
+                                    <x:String>1</x:String>
+                                    <x:String>2</x:String>
+                                    <x:String>3</x:String>
+                                    <x:String>4</x:String>
+                                    <x:String>5</x:String>
+                                    <x:String>6</x:String>
+                                    <x:String>7</x:String>
+                                    <x:String>8</x:String>
+                                    <x:String>9</x:String>
+                                    <x:String>10</x:String>
+                                </Picker.Items>
+                            </Picker>
+
+                            <Label Text="15mm Ins" FontSize="Medium" />
+                            <Picker SelectedIndexChanged="OnPickerChanged15mmIns" Margin="0" FontSize="Medium">
+                                <Picker.Items>
+                                    <x:String>1</x:String>
+                                    <x:String>2</x:String>
+                                    <x:String>3</x:String>
+                                    <x:String>4</x:String>
+                                    <x:String>5</x:String>
+                                    <x:String>6</x:String>
+                                    <x:String>7</x:String>
+                                    <x:String>8</x:String>
+                                    <x:String>9</x:String>
+                                    <x:String>10</x:String>
+                                </Picker.Items>
+                            </Picker>
+
+                            <Label Text="22mm Ins" FontSize="Medium" />
+                            <Picker SelectedIndexChanged="OnPickerChanged22mmIns" Margin="0" FontSize="Medium">
+                                <Picker.Items>
+                                    <x:String>1</x:String>
+                                    <x:String>2</x:String>
+                                    <x:String>3</x:String>
+                                    <x:String>4</x:String>
+                                    <x:String>5</x:String>
+                                    <x:String>6</x:String>
+                                    <x:String>7</x:String>
+                                    <x:String>8</x:String>
+                                    <x:String>9</x:String>
+                                    <x:String>10</x:String>
+                                </Picker.Items>
+                            </Picker>
+
+                            <Label Text="Speed Fit" FontSize="Medium" />
+                            <Picker SelectedIndexChanged="OnPickerChangedSpeedFit" Margin="0" FontSize="Medium">
+                                <Picker.Items>
+                                    <x:String>1</x:String>
+                                    <x:String>2</x:String>
+                                    <x:String>3</x:String>
+                                    <x:String>4</x:String>
+                                    <x:String>5</x:String>
+                                    <x:String>6</x:String>
+                                    <x:String>7</x:String>
+                                    <x:String>8</x:String>
+                                    <x:String>9</x:String>
+                                    <x:String>10</x:String>
+                                </Picker.Items>
+                            </Picker>
+
+                            <Label Text="L. Shield" FontSize="Medium" />
+                            <Picker SelectedIndexChanged="OnPickerChangedLShield" Margin="0" FontSize="Medium">
+                                <Picker.Items>
+                                    <x:String>1</x:String>
+                                    <x:String>2</x:String>
+                                    <x:String>3</x:String>
+                                    <x:String>4</x:String>
+                                    <x:String>5</x:String>
+                                    <x:String>6</x:String>
+                                    <x:String>7</x:String>
+                                    <x:String>8</x:String>
+                                    <x:String>9</x:String>
+                                    <x:String>10</x:String>
+                                </Picker.Items>
+                            </Picker>
+
+                            <Label Text="15mm x 3m" FontSize="Medium" />
+                            <Picker SelectedIndexChanged="OnPickerChanged15mmx3m" Margin="0" FontSize="Medium">
+                                <Picker.Items>
+                                    <x:String>1</x:String>
+                                    <x:String>2</x:String>
+                                    <x:String>3</x:String>
+                                    <x:String>4</x:String>
+                                    <x:String>5</x:String>
+                                    <x:String>6</x:String>
+                                    <x:String>7</x:String>
+                                    <x:String>8</x:String>
+                                    <x:String>9</x:String>
+                                    <x:String>10</x:String>
+                                </Picker.Items>
+                            </Picker>
+
+                            <Label Text="22mm x 3m" FontSize="Medium" />
+                            <Picker SelectedIndexChanged="OnPickerChanged22mmx3m" Margin="0" FontSize="Medium">
+                                <Picker.Items>
+                                    <x:String>1</x:String>
+                                    <x:String>2</x:String>
+                                    <x:String>3</x:String>
+                                    <x:String>4</x:String>
+                                    <x:String>5</x:String>
+                                    <x:String>6</x:String>
+                                    <x:String>7</x:String>
+                                    <x:String>8</x:String>
+                                    <x:String>9</x:String>
+                                    <x:String>10</x:String>
+                                </Picker.Items>
+                            </Picker>
+
+                            <Label Text="TRV's" FontSize="Medium" />
+                            <Picker SelectedIndexChanged="OnPickerChangedTVRs" Margin="0" FontSize="Medium">
+                                <Picker.Items>
+                                    <x:String>1</x:String>
+                                    <x:String>2</x:String>
+                                    <x:String>3</x:String>
+                                    <x:String>4</x:String>
+                                    <x:String>5</x:String>
+                                    <x:String>6</x:String>
+                                    <x:String>7</x:String>
+                                    <x:String>8</x:String>
+                                    <x:String>9</x:String>
+                                    <x:String>10</x:String>
+                                </Picker.Items>
+                            </Picker>
+
+                            <Label Text="Misc." FontSize="Medium" />
+                            <Picker SelectedIndexChanged="OnPickerChangedMisc" Margin="0" FontSize="Medium">
+                                <Picker.Items>
+                                    <x:String>1</x:String>
+                                    <x:String>2</x:String>
+                                    <x:String>3</x:String>
+                                    <x:String>4</x:String>
+                                    <x:String>5</x:String>
+                                    <x:String>6</x:String>
+                                    <x:String>7</x:String>
+                                    <x:String>8</x:String>
+                                    <x:String>9</x:String>
+                                    <x:String>10</x:String>
+                                </Picker.Items>
+                            </Picker>
+
+                            <Label Text="Day Rate" FontSize="Medium" />
+                            <Picker SelectedIndexChanged="OnPickerChangedDayRate" Margin="0" FontSize="Medium">
+                                <Picker.Items>
+                                    <x:String>1</x:String>
+                                    <x:String>2</x:String>
+                                    <x:String>3</x:String>
+                                    <x:String>4</x:String>
+                                    <x:String>5</x:String>
+                                    <x:String>6</x:String>
+                                    <x:String>7</x:String>
+                                    <x:String>8</x:String>
+                                    <x:String>9</x:String>
+                                    <x:String>10</x:String>
+                                </Picker.Items>
+                            </Picker>
+
+                            <Label Text="VAT" FontSize="Medium" />
+                            <Picker SelectedIndexChanged="OnPickerChangedVat" Margin="0" FontSize="Medium">
+                                <Picker.Items>
+                                    <x:String>1</x:String>
+                                    <x:String>2</x:String>
+                                    <x:String>3</x:String>
+                                    <x:String>4</x:String>
+                                    <x:String>5</x:String>
+                                    <x:String>6</x:String>
+                                    <x:String>7</x:String>
+                                    <x:String>8</x:String>
+                                    <x:String>9</x:String>
+                                    <x:String>10</x:String>
+                                </Picker.Items>
+                            </Picker>
+
+
+                        </StackLayout>
+                    </DataTemplate>
+                </expandable:ExpandableView.SecondaryViewTemplate>
+            </expandable:ExpandableView>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

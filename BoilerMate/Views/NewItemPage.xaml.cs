@@ -1,7 +1,6 @@
 ﻿using Android.App;
 using BoilerMate.Models;
 using BoilerMate.Services;
-
 using System;
 using System.ComponentModel;
 using Xamarin.Forms;
@@ -45,9 +44,6 @@ namespace BoilerMate.Views
            CameraButton.Clicked += CameraButton_Clicked;
         }
 
-     
-
-
 
         private async void CameraButton_Clicked(object sender, EventArgs e)
         {
@@ -84,10 +80,10 @@ namespace BoilerMate.Views
                     throw new Exception();
                 }
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 await DisplayAlert("Error", $"{ex}", "OK");
-            }                     
+            }
         }
 
         async void Cancel_Clicked(object sender, EventArgs e)
@@ -104,9 +100,11 @@ namespace BoilerMate.Views
           
         }
 
+        private void Next_Clicked(object sender, EventArgs e) =>  new NavigationPage(new Requirements(Item));
 
 
-    void OnPickerChangedBoilerGasSupply(object sender, EventArgs e)
+
+        void OnPickerChangedBoilerGasSupply(object sender, EventArgs e)
         {
             var picker = (Picker)sender;
             int selectedIndex = picker.SelectedIndex;

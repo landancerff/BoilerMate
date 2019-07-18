@@ -4,15 +4,163 @@
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d"
-             x:Class="BoilerMate.Views.Settings">
-    <ContentPage.Content>
-        <StackLayout>
-            <Label Text="Welcome to Xamarin.Forms!" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand" />
+             x:Class="BoilerMate.Views.Settings"
+             Title="Settings">
 
-            <Label Text="test"></Label>
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="Cancel" Clicked="Cancel_Clicked" />
+        <ToolbarItem Text="Save" Clicked="Save_Clicked" />
+    </ContentPage.ToolbarItems>
+
+    <ContentPage.Content>
+        <ScrollView>
+        <StackLayout Padding="10">
             
-            <Entry Text="{Binding Cost}" Placeholder="Value" />
-            
+            <Label Text="30Si Comp" FontSize="Medium" />
+            <Entry Text="{Binding ThirtySiCompValue, Mode=TwoWay}" d:Text="30Si Price"  FontSize="Small" />
+
+            <Label Text="Junior 30i" FontSize="Medium" />
+            <Entry Text="{Binding Junior30iValue}" d:Text="Junior 30i Price" FontSize="Small" />
+
+            <Label Text="Flashing" FontSize="Medium" />
+            <Entry Text="{Binding FlashingValue, Mode=TwoWay}" d:Text="Flashing Price" FontSize="Small" />
+
+            <Label Text="H Flue" FontSize="Medium" />
+            <Entry Text="{Binding HFlueValue, Mode=TwoWay}" d:Text="H Flue Price" FontSize="Small" />
+
+            <Label Text="V. Flue" FontSize="Medium" />
+            <Entry Text="{Binding VFlueValue, Mode=TwoWay}" d:Text="V. Flue Price" FontSize="Small" />
+
+            <Label Text="1M Ext" FontSize="Medium" />
+            <Entry Text="{Binding OneMExtValue}" d:Text="1M Ext Price" FontSize="Small" />
+
+            <Label Text="45 Degree" FontSize="Medium" />
+            <Entry Text="{Binding Deg45Value}" d:Text="45 Degree Price" FontSize="Small" />
+
+            <Label Text="90 Degree" FontSize="Medium" />
+            <Entry Text="{Binding Deg90Value}" d:Text="90 Degree Price" FontSize="Small" />
+
+            <Label Text="Plume Kit" FontSize="Medium" />
+            <Entry Text="{Binding PlumeKitValue}" d:Text="Plume Kit Price" FontSize="Small" />
+
+            <Label Text="Guard" FontSize="Medium" />
+            <Entry Text="{Binding GuardValue}" d:Text="Guard Price" FontSize="Small" />
+
+            <Label Text="Shock Ar." FontSize="Medium" />
+            <Entry Text="{Binding ShockArValue}" d:Text="Shock Ar. Price" FontSize="Small" />
+
+            <Label Text="Sclae Red" FontSize="Medium" />
+            <Entry Text="{Binding ScaleRedValue}" d:Text="Scale Red Price" FontSize="Small" />
+
+            <Label Text="RF P.Stat" FontSize="Medium" />
+            <Entry Text="{Binding RFPStatValue}" d:Text="RF P.Stat Price" FontSize="Small" />
+
+            <Label Text="F. Loop" FontSize="Medium" />
+            <Entry Text="{Binding FLoopValue}" d:Text="F. Loop Price" FontSize="Small" />
+
+            <Label Text="X800" FontSize="Medium" />
+            <Entry Text="{Binding X800Value}" d:Text="X800 Price" FontSize="Small" />
+
+            <Label Text="Inhibitor" FontSize="Medium" />
+            <Entry Text="{Binding InhibitorValue}" d:Text="Inhibitor Price" FontSize="Small" />
+
+            <Label Text="MB3" FontSize="Medium" />
+            <Entry Text="{Binding MB3Value}" d:Text="MB3 Price" FontSize="Small" />
+
+            <Label Text="TwinTech" FontSize="Medium" />
+            <Entry Text="{Binding TwinTechValue}" d:Text="TwinTech Price" FontSize="Small" />
+
+            <Label Text="Condensafe" FontSize="Medium" />
+            <Entry Text="{Binding CondensafeValue}" d:Text="Condensafe Price" FontSize="Small" />
+
+            <Label Text="Soak Away" FontSize="Medium" />
+            <Entry Text="{Binding SoakAwayValue}" d:Text="Soak Away Price" FontSize="Small" />
+
+            <Label Text="Cond Pump" FontSize="Medium" />
+            <Entry Text="{Binding CondPumpValue}" d:Text="Cond Pump Price" FontSize="Small" />
+
+            <Label Text="12Ri" FontSize="Medium" />
+            <Entry Text="{Binding Ri12Value}" d:Text="12Ri Price" FontSize="Small" />
+
+            <Label Text="15Ri" FontSize="Medium" />
+            <Entry Text="{Binding Ri15Value}" d:Text="15Ri Price" FontSize="Small" />
+
+            <Label Text="18Ri" FontSize="Medium" />
+            <Entry Text="{Binding Ri18Value}" d:Text="18Ri Price" FontSize="Small" />
+
+            <Label Text="24Ri" FontSize="Medium" />
+            <Entry Text="{Binding Ri24Value}" d:Text="24Ri Price" FontSize="Small" />
+
+            <Label Text="18i" FontSize="Medium" />
+            <Entry Text="{Binding i18Value}" d:Text="18i Value" FontSize="Small" />
+
+            <Label Text="27i" FontSize="Medium" />
+            <Entry Text="{Binding i27Value}" d:Text="27i Price" FontSize="Small" />
+
+            <Label Text="Pump" FontSize="Medium" />
+            <Entry Text="{Binding PumpValue}" d:Text="Pump Price" FontSize="Small" />
+
+            <Label Text="Unions" FontSize="Medium" />
+            <Entry Text="{Binding UnionsValue}" d:Text="Unions Price" FontSize="Small" />
+
+            <Label Text="3P Control Pack" FontSize="Medium" />
+            <Entry Text="{Binding ControlPK3pValue}" d:Text="3P Control Pack Price" FontSize="Small" />
+
+            <Label Text="2P Cotnrol Pack" FontSize="Medium" />
+            <Entry Text="{Binding ControlPK2pValue}" d:Text="2P Cotnrol Pack Price" FontSize="Small" />
+
+            <Label Text="Immersion" FontSize="Medium" />
+            <Entry Text="{Binding ImmersionValue}" d:Text="Immersion Price" FontSize="Small" />
+
+            <Label Text="Cylinder 900x450" FontSize="Medium" />
+            <Entry Text="{Binding Cyl900x450Value}" d:Text="Cylinder 900x450 Price" FontSize="Small" />
+
+            <Label Text="Cylinder 900x400" FontSize="Medium" />
+            <Entry Text="{Binding Cyl900x400Value}" d:Text="Cylinder 900x400 Price" FontSize="Small" />
+
+            <Label Text="Cylinder 1050x450" FontSize="Medium" />
+            <Entry Text="{Binding Cyl1050x450Value}" d:Text="Cylinder 1050x450 Price" FontSize="Small" />
+
+            <Label Text="Cylinder 1200x450" FontSize="Medium" />
+            <Entry Text="{Binding Cyl1200x450Value}" d:Text="Cylinder 1200x450 Price" FontSize="Small" />
+
+            <Label Text="Junction Box" FontSize="Medium" />
+            <Entry Text="{Binding JunctionBoxValue}" d:Text="Junction Box Price" FontSize="Small" />
+
+            <Label Text="Spur" FontSize="Medium" />
+            <Entry Text="{Binding SpurValue}" d:Text="Spur Price" FontSize="Small" />
+
+            <Label Text="15mm Ins" FontSize="Medium" />
+            <Entry Text="{Binding Ins15mmValue}" d:Text="15mm Ins Price" FontSize="Small" />
+
+            <Label Text="22mm Ins" FontSize="Medium" />
+            <Entry Text="{Binding Ins22mmValue}" d:Text="22mm Ins Price" FontSize="Small" />
+
+            <Label Text="Speed Fit" FontSize="Medium" />
+            <Entry Text="{Binding SpeedFitValue}" d:Text="Speed Fit Price" FontSize="Small" />
+
+            <Label Text="L. Shield" FontSize="Medium" />
+            <Entry Text="{Binding LShieldValue}" d:Text="L. Shield Price" FontSize="Small" />
+
+            <Label Text="15mm x 3m" FontSize="Medium" />
+            <Entry Text="{Binding Pipe15mmx3mValue}" d:Text="15mm x 3m Price" FontSize="Small" />
+
+            <Label Text="22mm x 3m" FontSize="Medium" />
+            <Entry Text="{Binding Pipe22mmx3mValue}" d:Text="22mm x 3m Price" FontSize="Small" />
+
+            <Label Text="TRV's" FontSize="Medium" />
+            <Entry Text="{Binding TRVsValue}" d:Text="TRV's Price" FontSize="Small" />
+
+            <Label Text="Misc." FontSize="Medium" />
+            <Entry Text="{Binding MiscValue}" d:Text="Misc. Price" FontSize="Small" />
+
+            <Label Text="Day Rate" FontSize="Medium" />
+            <Entry Text="{Binding DaysValue}" d:Text="Day Rate Price" FontSize="Small" />
+
+            <Label Text="VAT Value" FontSize="Medium" />
+            <Entry Text="{Binding VATRate}" d:Text="VAT Percentage" FontSize="Small" />
+           
         </StackLayout>
+        </ScrollView>
     </ContentPage.Content>
 </ContentPage>

@@ -31,6 +31,7 @@ C:\Users\User\FreeTime_Projects\BoilerMate\BoilerMate\obj\Debug\netstandard2.0\V
 C:\Users\User\FreeTime_Projects\BoilerMate\BoilerMate\obj\Debug\netstandard2.0\Views\MainPage.xaml.g.cs
 C:\Users\User\FreeTime_Projects\BoilerMate\BoilerMate\obj\Debug\netstandard2.0\Views\MenuPage.xaml.g.cs
 C:\Users\User\FreeTime_Projects\BoilerMate\BoilerMate\obj\Debug\netstandard2.0\Views\NewItemPage.xaml.g.cs
+C:\Users\User\FreeTime_Projects\BoilerMate\BoilerMate\obj\Debug\netstandard2.0\Views\Requirements.xaml.g.cs
 C:\Users\User\FreeTime_Projects\BoilerMate\BoilerMate\obj\Debug\netstandard2.0\Views\Settings.xaml.g.cs
 C:\Users\User\FreeTime_Projects\BoilerMate\BoilerMate\obj\Debug\netstandard2.0\Views\ZoomImagePopup.xaml.g.cs
 C:\Users\User\FreeTime_Projects\BoilerMate\BoilerMate\obj\Debug\netstandard2.0\BoilerMate.csproj.CoreCompileInputs.cache
@@ -42,3 +43,4 @@ C:\Users\User\FreeTime_Projects\BoilerMate\BoilerMate\obj\Debug\netstandard2.0\B
 C:\Users\User\FreeTime_Projects\BoilerMate\BoilerMate\obj\Debug\netstandard2.0\ref\BoilerMate.dll
 C:\Users\User\FreeTime_Projects\BoilerMate\BoilerMate\obj\Debug\netstandard2.0\BoilerMate.pdb
 C:\Users\User\FreeTime_Projects\BoilerMate\BoilerMate\obj\Debug\netstandard2.0\BoilerMate.csprojAssemblyReference.cache
+C:\Users\User\FreeTime_Projects\BoilerMate\BoilerMate\obj\Debug\netstandard2.0\Views\PricingSettings.xaml.g.cs

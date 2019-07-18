@@ -4,6 +4,7 @@ using BoilerMate.Services;
 using SQLite;
 using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.IO;
 using System.Threading.Tasks;
 using Xamarin.Forms;
@@ -24,6 +25,7 @@ namespace BoilerMate.Services
                 database = DependencyService.Get<IDBInterface>().CreateConnection();                
             }
             SQLiteStore context = new SQLiteStore();
+
             public List<JobReport> GetAllJobsAsync()
             {
                 
@@ -78,6 +80,26 @@ namespace BoilerMate.Services
                
             }
 
+            public async Task<int> SaveSettingsAsync(RequirementSpec job)
+            {
+                // context.DeleteTable();    
+
+                if (context.RequirementTableExists("RequirementSpec"))
+                {                  
+                    return database.Update(job);
+                }
+                else
+                {
+                    context.CreateTableRequirementAsync("RequirementSpec");
+                    if (context.RequirementTableExists("RequirementSpec"))
+                    {
+                        return database.Insert(job);
+                    }
+                    return default;
+                }
+
+            }
+
 
             public List<ExportModel> GetAllExportsAsync()
             {
@@ -96,6 +118,21 @@ namespace BoilerMate.Services
                 }
             }
 
+            public List<RequirementSpec> GetAllRequirementValues()
+            {
+                if (context.RequirementTableExists("RequirementSpec"))
+                {
+                    return database.Query<RequirementSpec>("Select * From RequirementSpec");
+                }
+                else
+                {
+                    if (context.CreateTableRequirementAsync("RequirementSpec"))
+                    {
+                        return database.Query<RequirementSpec>("Select * From RequirementSpec");
+                    }
+                    return null;
+                }
+            }
 
 
 
