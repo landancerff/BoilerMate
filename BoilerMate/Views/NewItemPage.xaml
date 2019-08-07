@@ -10,7 +10,7 @@
     
     <ContentPage.ToolbarItems>
         <ToolbarItem Text="Cancel" Clicked="Cancel_Clicked" />
-        <ToolbarItem Text="Next Page" Clicked="Next_Clicked" />
+        <ToolbarItem Text="Next" Clicked="Next_Clicked" />
         <!--<ToolbarItem Text="Save" Clicked="Save_Clicked" />-->
     </ContentPage.ToolbarItems>
     
@@ -132,7 +132,7 @@
                         <DataTemplate>
                             <StackLayout Padding="2">
 
-                                <Label Text="Down" FontSize="Medium" />
+                                <Label Text="Down stairs" FontSize="Medium" />
                                 <Picker  FontSize="Medium" SelectedIndexChanged="OnPickerChangedDown" Margin="0">
                                     <Picker.Items>
                                         <x:String>1</x:String>
@@ -148,7 +148,7 @@
                                     </Picker.Items>
                                 </Picker>
 
-                                <Label Text="Up" FontSize="Medium" />
+                                <Label Text="Up stairs" FontSize="Medium" />
                                 <Picker  FontSize="Medium" SelectedIndexChanged="OnPickerChangedUp" Margin="0">
                                     <Picker.Items>
                                         <x:String>1</x:String>

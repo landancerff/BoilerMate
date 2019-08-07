@@ -25,7 +25,7 @@ namespace BoilerMate.Views
 
         public async Task NavigateFromMenu(int id)
         {
-          
+            
             if (!MenuPages.ContainsKey(id))
             {
                 switch (id)
@@ -39,12 +39,9 @@ namespace BoilerMate.Views
                     case (int)MenuItemType.About:
                         MenuPages.Add(id, new NavigationPage(new AboutPage()));
                         break;
-                    case (int)MenuItemType.Settings:
+                    case (int)MenuItemType.PricingSettings:
                         MenuPages.Add(id, new NavigationPage(new Settings()));
-                        break;
-                    case (int)MenuItemType.PirceSettings:
-                        MenuPages.Add(id, new NavigationPage(new PricingSettings()));
-                        break;
+                        break;                  
                 }
             }
 

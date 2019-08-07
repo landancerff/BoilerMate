@@ -1,17 +1,20 @@
-﻿using SQLite;
+﻿
+using SQLite;
 using System;
 using System.Collections.Generic;
 using System.Text;
 
 namespace BoilerMate.Models
 {
+  
     [Table("RequirementSpec")]
     public class RequirementSpec
     {
-        [PrimaryKey, AutoIncrement, Unique]
+        [PrimaryKey, AutoIncrement, Unique, SQLite.Column("ID")]
         public int ID { get; set; }
 
-        public string ThirtySiCompValue { get; set; }
+        public int ThirtySiCompValue { get; set; }
+         
         public int Junior30iValue { get; set; }
         public int FlashingValue { get; set; }
         public int HFueValue { get; set; }

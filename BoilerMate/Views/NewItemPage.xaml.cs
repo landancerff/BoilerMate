@@ -100,8 +100,7 @@ namespace BoilerMate.Views
           
         }
 
-        private void Next_Clicked(object sender, EventArgs e) =>  new NavigationPage(new Requirements(Item));
-
+        private void Next_Clicked(object sender, EventArgs e) => Navigation.PushAsync(new Requirements(Item));
 
 
         void OnPickerChangedBoilerGasSupply(object sender, EventArgs e)

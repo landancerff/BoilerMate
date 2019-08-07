@@ -1,7 +1,7 @@
 {
   "runtimeTarget": {
     "name": ".NETStandard,Version=v2.0/",
-    "signature": "edf8d1fcdb0bb0625e041dab5aff001b9989029d"
+    "signature": "0a04e0ce7bc32f857d05a93e486f0d78ccdb1e59"
   },
   "compilationOptions": {},
   "targets": {
@@ -13,6 +13,7 @@
           "NETStandard.Library": "2.0.3",
           "Newtonsoft.Json": "12.0.2",
           "PCLStorage": "1.0.2",
+          "PropertyChanged.Fody": "3.0.1",
           "Rg.Plugins.Popup": "1.1.5.188",
           "SQLiteNetExtensions": "2.1.0",
           "Syncfusion.Xamarin.Pdf": "17.1.0.53",
@@ -41,6 +42,7 @@
           }
         }
       },
+      "Fody/5.0.6": {},
       "Microsoft.Bcl/1.1.6": {
         "dependencies": {
           "Microsoft.Bcl.Build": "1.0.10"
@@ -97,6 +99,18 @@
           "lib/netstandard2.0/Plugin.Permissions.dll": {
             "assemblyVersion": "1.0.0.0",
             "fileVersion": "1.0.0.0"
+          }
+        }
+      },
+      "PropertyChanged.Fody/3.0.1": {
+        "dependencies": {
+          "Fody": "5.0.6",
+          "NETStandard.Library": "2.0.3"
+        },
+        "runtime": {
+          "lib/netstandard1.0/PropertyChanged.dll": {
+            "assemblyVersion": "3.0.1.0",
+            "fileVersion": "3.0.1.0"
           }
         }
       },
@@ -299,6 +313,13 @@
       "path": "expandableview/1.0.9",
       "hashPath": "expandableview.1.0.9.nupkg.sha512"
     },
+    "Fody/5.0.6": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-BO5/h7Xnee91hNzt+oAuNvQiMdf/eTgYuiNP0SokcwjaD2MUrW6d5BjWqH2ukwzJDfbyo1Q8UJBbwlC/Ax2GaA==",
+      "path": "fody/5.0.6",
+      "hashPath": "fody.5.0.6.nupkg.sha512"
+    },
     "Microsoft.Bcl/1.1.6": {
       "type": "package",
       "serviceable": true,
@@ -354,6 +375,13 @@
       "sha512": "sha512-VrYqI/ufk3bH6gTP1JJlLByjhS0CHu3riKmdozhX9/qXA9hlvLolmcqKJdyAqpzmrVC74m3ZtirUBIrBxvT1Lw==",
       "path": "plugin.permissions/3.0.0.12",
       "hashPath": "plugin.permissions.3.0.0.12.nupkg.sha512"
+    },
+    "PropertyChanged.Fody/3.0.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-k6ds4qRFDzQ7uHTMG2Xq/veHpO7fSPobsulsi2CuWPAX3XWsseCUPh2TaDb4f1YN6gld+UGCaSBjpFc1jpljwA==",
+      "path": "propertychanged.fody/3.0.1",
+      "hashPath": "propertychanged.fody.3.0.1.nupkg.sha512"
     },
     "Rg.Plugins.Popup/1.1.5.188": {
       "type": "package",

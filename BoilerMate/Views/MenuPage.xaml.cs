@@ -24,8 +24,7 @@ namespace BoilerMate.Views
                 new HomeMenuItem {Id = MenuItemType.Jobs, Title="Browse" },
                 new HomeMenuItem {Id = MenuItemType.Export, Title="Export" },
                 new HomeMenuItem {Id = MenuItemType.About, Title="About" },
-                new HomeMenuItem {Id = MenuItemType.Settings, Title="Settings" },
-                new HomeMenuItem {Id = MenuItemType.PirceSettings, Title="Price Settings"}
+                new HomeMenuItem {Id = MenuItemType.PricingSettings, Title="Pricing Settings" }            
                 
             };
 

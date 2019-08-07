@@ -41,8 +41,7 @@ namespace BoilerMate.ViewModels
           
             try
             {
-                Items.Clear();
-                List<string> jobs = new List<string>();
+                Items.Clear();                
 
                 Tools toolContext = new Tools();
                 var items =  _context.GetAllJobsAsync();
@@ -51,7 +50,10 @@ namespace BoilerMate.ViewModels
 
                 foreach (var item in items)
                 {
-                    item.Picture = (Image)toolContext.RetriveImageFromLocation(item.PictureLocation, item.PictureName, outImg);
+                    if(item.PictureName != null && item.PictureName != string.Empty && item.PictureName != "")
+                    {
+                        item.Picture = toolContext.RetriveImageFromLocation(item.PictureLocation, item.PictureName, outImg);
+                    }                 
                     Items.Add(item);
                    
                 }

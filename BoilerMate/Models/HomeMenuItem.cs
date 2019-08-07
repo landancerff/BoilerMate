@@ -9,8 +9,7 @@ namespace BoilerMate.Models
         Jobs,
         Export,
         About,
-        Settings,
-        PirceSettings
+        PricingSettings      
     }
     public class HomeMenuItem
     {

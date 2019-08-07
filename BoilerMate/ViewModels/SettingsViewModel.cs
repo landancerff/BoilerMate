@@ -14,30 +14,29 @@ namespace BoilerMate.ViewModels
    public partial class SettingsViewModel : BaseViewModel
     {
         readonly DatabaseActions.DatabaseManager _context = new DatabaseActions.DatabaseManager();
-        public ObservableCollection<RequirementSpec> Item { get; set; }
+       
         public Command LoadSettingsCommand { get; set; }
-        public ExportModel Export { get; set; }
+     
 
-        public RequirementSpec Spec { get; set; }
+        public ObservableCollection<RequirementSpec> SettingItem { get; set; }
 
 
         public SettingsViewModel()
         {
-            Title = "Settings";
-            Item = new ObservableCollection<RequirementSpec>();
+            SettingItem = new ObservableCollection<RequirementSpec>();
             IsBusy = false;
             LoadSettingsCommand = new Command(async () => await ExecuteLoadItemsCommand());
 
             MessagingCenter.Subscribe<Settings, RequirementSpec>(this, "AddItem", async (obj, item) =>
             {
                 var newItem = item as RequirementSpec;
-                Item.Add(newItem);
+                SettingItem.Add(newItem);
                 await _context.SaveSettingsAsync(newItem);
             });
         }
-        async Task ExecuteLoadItemsCommand()
+        public async Task ExecuteLoadItemsCommand()
         {
-            ObservableCollection<RequirementSpec> jobs = new ObservableCollection<RequirementSpec>();
+          
             if (IsBusy)
                 return;
 
@@ -45,17 +44,12 @@ namespace BoilerMate.ViewModels
 
             try
             {
-                Item.Clear();
-               
+                SettingItem.Clear();               
                 
                 var items = _context.GetAllRequirementValues();
 
-                //var outImg = new Image();
-
-                foreach (var item in items)
-                {
-                    jobs.Add(item);
-                }
+                SettingItem.Add(items[0]);
+                
             }
             catch (Exception ex)
             {
@@ -63,8 +57,7 @@ namespace BoilerMate.ViewModels
             }
             finally
             {
-                Item = jobs;
-                OnPropertyChanged(nameof(Item));
+                //OnPropertyChanged(nameof(SettingItem));
                 IsBusy = false;
             }
         }

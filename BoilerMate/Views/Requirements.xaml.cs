@@ -23,18 +23,21 @@ namespace BoilerMate.Views
             InitializeComponent();
 
             Item = item;
+           
         }
 
         async void Save_Clicked(object sender, EventArgs e)
         {
             try
             {
-
+                RequirementCalc reqCalc = new RequirementCalc();
                 //generate the total costs etc before updating the DB
-
+                var total = reqCalc.CalculateRequirements(Item);
+                Item.TotalCost = total;
                 var response = await _context.SaveJobAsync(Item);
 
                 if (response != default)
+
                 {
                     await DisplayAlert("Success", "Job saved", "OK");
                     await Navigation.PopModalAsync();
@@ -65,15 +68,15 @@ namespace BoilerMate.Views
 
         }
 
-        void TotalGenerator()
+       async void TotalGenerator(object sender, EventArgs e)
         {
-            // get value * quantity
+            RequirementCalc calc = new RequirementCalc();
+            BindingContext = this;
+            Item.TotalCost = calc.CalculateRequirements(Item);
+           // TotalJobCost.Text = calc.CalculateRequirements(Item);
         }
 
-
-
-
-        void OnPickerChanged30Si(object sender, EventArgs e)
+            void OnPickerChanged30Si(object sender, EventArgs e)
         {
             var picker = (Picker)sender;
             int selectedIndex = picker.SelectedIndex;

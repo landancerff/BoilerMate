@@ -15,6 +15,7 @@
   <ItemGroup>
     <PackageReference Include="ExpandableView" Version="1.0.9" />
     <PackageReference Include="PCLStorage" Version="1.0.2" />
+    <PackageReference Include="PropertyChanged.Fody" Version="3.0.1" />
     <PackageReference Include="Rg.Plugins.Popup" Version="1.1.5.188" />
     <PackageReference Include="sqlite-net-pcl" Version="1.5.231" />
     <PackageReference Include="SQLiteNetExtensions" Version="2.1.0" />
@@ -42,9 +43,6 @@
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
     <EmbeddedResource Update="Views\ImagePreviewer.xaml">
-      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
-    </EmbeddedResource>
-    <EmbeddedResource Update="Views\PricingSettings.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
     <EmbeddedResource Update="Views\Requirements.xaml">

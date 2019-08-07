@@ -15,9 +15,6 @@
 
     <ContentPage.Content>
         <StackLayout>
-            <Label Text="Welcome to Xamarin.Forms!"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
             <expandable:ExpandableView>
                 <expandable:ExpandableView.PrimaryView>
                     <StackLayout Orientation="Vertical">
@@ -26,7 +23,9 @@
                 </expandable:ExpandableView.PrimaryView>
                 <expandable:ExpandableView.SecondaryViewTemplate>
                     <DataTemplate>
-                        <StackLayout Padding="2">
+                        <ScrollView>
+                            <StackLayout Padding="5">
+                           
                             <Label Text="30Si Comp" FontSize="Medium" />
                             <Picker SelectedIndexChanged="OnPickerChanged30Si" Margin="0" FontSize="Medium"> 
                             <Picker.Items>
@@ -794,12 +793,16 @@
                                     <x:String>10</x:String>
                                 </Picker.Items>
                             </Picker>
-
-
-                        </StackLayout>
+                                <Button Text="Calculate Total" Clicked="TotalGenerator"></Button>
+                                <Label Text="Total Cost" FontSize="Medium" />
+                                <Label x:Name="TotalJobCost" Text="{Binding Item.TotalCost}"  FontSize="Medium" />
+                                <Entry  Text="{Binding Item.TotalCost}"  Placeholder="{Binding Item.TotalCost}"></Entry>
+                            </StackLayout>
+                        </ScrollView>
                     </DataTemplate>
                 </expandable:ExpandableView.SecondaryViewTemplate>
             </expandable:ExpandableView>
+            
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

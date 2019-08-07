@@ -27,8 +27,7 @@ namespace BoilerMate.Services
             SQLiteStore context = new SQLiteStore();
 
             public List<JobReport> GetAllJobsAsync()
-            {
-                
+            {              
                 if (context.TableExists("PreviousJobs"))
                 {
                     return database.Query<JobReport>("Select * From PreviousJobs");
@@ -42,6 +41,24 @@ namespace BoilerMate.Services
                     return null;
                 }               
             }
+
+            public List<RequirementSpec> GetAllPricesAsync()
+            {
+               
+                if (context.TableExists("RequirementSpec"))
+                {
+                    return database.Query<RequirementSpec>("Select * From RequirementSpec where ID = 1");
+                }
+                else
+                {
+                    if (context.CreateTableAsync("RequirementSpec"))
+                    {
+                        return database.Query<RequirementSpec>("Select * From RequirementSpec where ID = 1");
+                    }
+                    return null;
+                }
+            }
+
 
             public List<JobReport> GetSpecificJobAsync(int id)
             {
@@ -61,9 +78,7 @@ namespace BoilerMate.Services
             }
 
             public async Task<int> SaveJobAsync(JobReport job)
-            {
-              
-              // context.DeleteTable();    
+            {              
 
                 if (context.TableExists("PreviousJobs")){
                     return database.Insert(job);
@@ -81,8 +96,7 @@ namespace BoilerMate.Services
             }
 
             public async Task<int> SaveSettingsAsync(RequirementSpec job)
-            {
-                // context.DeleteTable();    
+            {                
 
                 if (context.RequirementTableExists("RequirementSpec"))
                 {                  
@@ -103,7 +117,7 @@ namespace BoilerMate.Services
 
             public List<ExportModel> GetAllExportsAsync()
             {
-                //context.DeleteTable();
+                //context.DeleteTable("ExportModel");
                 if (context.ExportTableExists("ExportModel"))
                 {
                     return database.Query<ExportModel>("Select * From ExportModel");
@@ -120,26 +134,49 @@ namespace BoilerMate.Services
 
             public List<RequirementSpec> GetAllRequirementValues()
             {
+                var specCol = new ObservableCollection<RequirementSpec>(FirstTimeSettings());
                 if (context.RequirementTableExists("RequirementSpec"))
                 {
-                    return database.Query<RequirementSpec>("Select * From RequirementSpec");
+                   
+                    if (specCol.Count != 0)
+                    {
+                        return database.Query<RequirementSpec>("Select * From RequirementSpec where id = 1");
+                    }
+                    else
+                    {
+                        RequirementSpec job = new RequirementSpec();
+                        database.Insert(job);
+                        return database.Query<RequirementSpec>("Select * From RequirementSpec where id = 1");
+                    }                   
                 }
                 else
                 {
                     if (context.CreateTableRequirementAsync("RequirementSpec"))
                     {
-                        return database.Query<RequirementSpec>("Select * From RequirementSpec");
+                        if (specCol.Count != 0)
+                        {
+                            return database.Query<RequirementSpec>("Select * From RequirementSpec where id = 1");
+                        }
+                        else
+                        {
+                            RequirementSpec job = new RequirementSpec();
+                            database.Insert(job);
+                            return database.Query<RequirementSpec>("Select * From RequirementSpec where id = 1");
+                        }
                     }
                     return null;
                 }
             }
 
 
+            public List<RequirementSpec>  FirstTimeSettings()
+            {
+                return database.Query<RequirementSpec>("select * from requirementspec where id = 1");
+            }
+
 
             public async Task<int> SaveExportAsync(ExportModel job)
-            {
-
-                //context.DeleteTable();    Clear data of table, use if new fields are added.
+            {           
 
                 if (context.ExportTableExists("ExportModel"))
                 {
